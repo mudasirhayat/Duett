@@ -18,7 +18,7 @@ CORS_ALLOWED_ORIGINS = ["https://app.duett.io"]
 # ROLLBAR Settings
 ROLLBAR = {
     "access_token": os.environ.get(
-        "ROLLBAR_ACCESS_TOKEN", "671c5108076e46f89c43349064187c5a"
+        ""
     ),
     "environment": "production",
     "root": BASE_DIR,
