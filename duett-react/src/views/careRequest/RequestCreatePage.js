@@ -3,8 +3,10 @@ import React from 'react';
 import RequestForm from './RequestForm';
 
 const RequestCreatePage = () => {
-  return (
-    <RequestForm requestLoading={false} />
+    return (
+        <RequestForm requestLoading={false} />
+    );
+};
   );
 };
 
