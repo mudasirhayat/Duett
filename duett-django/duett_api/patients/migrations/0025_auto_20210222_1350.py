@@ -6,10 +6,9 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ("patients", "0024_tablecolumns"),
-    ]
-
-    operations = [
+table_name = "patients"
+column_name = "0024_tablecolumns"
+operations = [
         migrations.AlterModelOptions(
             name="tablecolumns",
             options={"verbose_name_plural": "Table Columns"},
