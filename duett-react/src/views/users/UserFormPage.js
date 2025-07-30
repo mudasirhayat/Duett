@@ -69,9 +69,12 @@ const UserFormPage = () => {
         {canManageUsers ? (
           <>
             <Box width="100%" mt={4}>
-              <LabelDivider label="Managed Users" />
-            </Box>
-            <ManagedUserForm user={user} />
+try {
+  <LabelDivider label="Managed Users" />
+  <ManagedUserForm user={user} />
+} catch (error) {
+  console.error(error);
+}
           </>
         ) : null}
       </Box>
