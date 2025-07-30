@@ -1,0 +1,80 @@
+{
+  "name": "duett-react",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.12.3",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.60",
+    "aws-sdk": "^2.1679.0",
+    "axios": "^1.7.2",
+    "buffer": "^6.0.3",
+    "clsx": "^1.1.1",
+    "fast-sort": "^3.4.0",
+    "filter-data": "^0.5.1",
+    "lodash.debounce": "^4.0.8",
+    "lodash.sortby": "^4.7.0",
+    "path-to-regexp": "^6.2.0",
+    "prop-types": "^15.7.2",
+    "qrcode": "^1.5.3",
+    "react": "^17.0.2",
+    "react-beautiful-dnd": "^13.1.0",
+    "react-datepicker": "^4.1.1",
+    "react-dom": "^17.0.2",
+    "react-hook-form": "^7.12.2",
+    "react-s3": "^1.3.1",
+    "react-scripts": "^5.0.1",
+    "react-virtuoso": "^4.6.2",
+    "rollbar": "^2.24.0",
+    "webpack": "^5.93.0",
+    "wouter": "^2.7.4",
+    "zustand": "^3.5.7"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "CI=false && react-scripts build",
+    "build:staging": "env-cmd -f .env.staging npm run build",
+    "build:production": "env-cmd -f .env.production npm run build",
+    "build:qa": "env-cmd -f .env.qa npm run build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "prettier": {
+    "singleQuote": true
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,json,css,scss,md}": [
+      "prettier --write"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.0.0",
+    "@testing-library/user-event": "^13.2.1",
+    "env-cmd": "^10.1.0",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.5.1",
+    "prettier": "^2.1.2",
+    "sass": "^1.77.8"
+  }
+}

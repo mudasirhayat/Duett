@@ -1,0 +1,108 @@
+image: python:3.7.1
+
+definitions:
+  steps:
+    - parallel:
+        - step: &test
+            image: python:3.7.1
+            name: "Run Django Tests"
+            caches:
+              - pip
+            services:
+              - postgres
+            artifacts:
+              - requirements.txt
+            script:
+              - pip install --upgrade pip
+              - pip install -r requirements.txt
+              - python manage.py test --settings=config.settings.test --keepdb
+        - step: &grunt
+            image: node:12.6.0
+            name: "Grunt"
+            caches:
+              - node
+            script:
+              - yarn
+              - npm rebuild node-sass
+              - node_modules/.bin/grunt build
+            artifacts:
+              - lo357_django/static/**/*
+    - step: &zip
+        name: "Zip application"
+        script:
+          - sed -i s/deb.debian.org/archive.debian.org/g /etc/apt/sources.list
+          - sed -i 's|security.debian.org|archive.debian.org/|g' /etc/apt/sources.list
+          - sed -i '/stretch-updates/d' /etc/apt/sources.list
+          - apt-get update
+          - apt-get install -y --no-install-recommends zip
+          - zip -r application.zip ./  -x node_modules/\* src/\*
+        artifacts:
+          - application.zip
+    - step: &deploy
+        name: Deploy
+        deployment: staging
+        script:
+          - pip install --upgrade pip
+          - pip install -r requirements.txt
+          - mkdir static
+          - python manage.py collectstatic --noinput
+          - pipe: atlassian/aws-elasticbeanstalk-deploy:0.2.1
+            variables:
+              AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+              AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+              AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION
+              APPLICATION_NAME: $APPLICATION_NAME
+              S3_BUCKET: $DEPLOY_S3_BUCKET
+              ZIP_FILE: "application.zip"
+              VERSION_LABEL: "deploy-$BITBUCKET_BUILD_NUMBER-multiple"
+              ENVIRONMENT_NAME: $ENVIRONMENT_NAME
+              RDS_DB_NAME: $RDS_DB_NAME
+              RDS_USERNAME: $RDS_USERNAME
+              RDS_PASSWORD: $RDS_PASSWORD
+              RDS_HOSTNAME: $RDS_HOSTNAME
+              RDS_PORT: $RDS_PORT
+
+  services:
+    postgres:
+      image: postgres:9.6.4
+      variables:
+        POSTGRES_DB: 'duett'
+        POSTGRES_USER: 'duett_admin'
+
+pipelines:
+  default:
+    - step: *test
+
+  branches:
+    development:
+      - step: *test
+      - step: *zip
+      - step:
+          <<: *deploy
+          name: "Deploy to Staging"
+          deployment: staging
+
+  custom:
+    production-deployment:
+      - step: *test
+      - step: *zip
+      - step:
+          <<: *deploy
+          name: "Deploy to Production"
+          deployment: production
+
+    staging-deployment:
+      - step: *test
+      - step: *zip
+      - step:
+          <<: *deploy
+          name: "Deploy to Staging"
+          deployment: staging
+
+    qa-deployment:
+      - step: *test
+      - step: *zip
+      - step:
+          <<: *deploy
+          name: "Deploy to QA"
+          deployment: qa
