@@ -523,6 +523,12 @@ class AgencyPatientSearchSerializer(serializers.ModelSerializer):
 
 class AgencyPatientRequestSearchSerializer(serializers.ModelSerializer):
     patient = AgencyPatientSearchSerializer(many=False)
+
+    def create(self, validated_data):
+        try:
+            return super().create(validated_data)
+        except Exception as e:
+            raise serializers.ValidationError
     care_manager = CustomUserDetailsSearchSerializer(many=False, source="assigned_to")
     status = serializers.SerializerMethodField()
     services = serializers.SerializerMethodField(source="servicerequested_set")
