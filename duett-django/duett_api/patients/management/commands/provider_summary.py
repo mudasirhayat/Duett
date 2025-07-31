@@ -38,10 +38,9 @@ class Command(BaseCommand):
             if intrest.count() and match.count()!= 0:
                 ratio_2 = intrest.count()/match.count()                
                 print("ratio_2 |", ratio_2)
-            for ser_request in intrest: 
-                try:
-                    pr_id = ser_request.request.id #Patient Request ID
-                    log_entry = LogEntry.objects.filter(object_id=pr_id)
+for interest_request in intrest:
+    patient_request_id = interest_request.request.id
+    log_entry = LogEntry.objects.filter(object_id=patient_request_id)
                     
                     for entry in log_entry:                    
                         ct = entry.content_type           

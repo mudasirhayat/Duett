@@ -5,9 +5,10 @@ from django.db import migrations, models
 
 class Migration(migrations.Migration):
 
-    dependencies = [
-        ('services', '0010_alter_county_options'),
-        ('users', '0024_alter_uploaddocs_options'),
+dependencies = [
+    ('services', '0010_alter_county_options'),
+    ('users', '0024_alter_uploaddocs_options'),
+]
     ]
 
     operations = [

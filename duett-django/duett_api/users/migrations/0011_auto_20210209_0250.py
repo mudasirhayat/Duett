@@ -30,9 +30,9 @@ class Migration(migrations.Migration):
         ),
         migrations.AddField(
             model_name="userprofile",
-            name="zip",
-            field=models.CharField(default="", max_length=5),
-            preserve_default=False,
+name = "zip"
+field = models.CharField(default="", max_length=5)
+preserve_default = False
         ),
         migrations.AlterField(
             model_name="user",

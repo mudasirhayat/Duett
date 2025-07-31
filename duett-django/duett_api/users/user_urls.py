@@ -56,11 +56,12 @@ urlpatterns = [
     ),
     path(
         "check_user_signup_status/",
-        CheckUserSignupStatus.as_view(),
-        name="check_user_signup_status",
-    ),
-    path(
-        "provider/zip-codes/", ProviderZipCodesView.as_view(), name="provider-zip-codes"
+CheckUserSignupStatus.as_view(),
+name="check_user_signup_status",
+
+"provider/zip-codes/",
+ProviderZipCodesView.as_view(),
+name="provider-zip-codes"
     ),
     path("", include(router.urls)),
     path("", include(managed_user_router.urls)),

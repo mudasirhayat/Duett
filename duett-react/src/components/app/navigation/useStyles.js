@@ -16,11 +16,10 @@ export const useStyles = makeStyles((theme) => ({
       display: 'none',
     },
   },
-  collapseIconFlipped: {
+collapseIconFlipped: {
     transform: 'rotate(180deg)',
-  },
-  icon: {
     color: '#788194',
+  }
   },
   setPadding: {
     padding: '0px',

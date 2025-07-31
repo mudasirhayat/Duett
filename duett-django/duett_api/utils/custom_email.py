@@ -3,7 +3,7 @@ from django.core.mail.backends.base import BaseEmailBackend
 
 from duett_api.djcelery_email.tasks import send_emails
 from duett_api.djcelery_email.utils import chunked, email_to_dict
-
+from email.backends.base import BaseEmailBackend
 
 class CeleryEmailBackend(BaseEmailBackend):
     def __init__(self, fail_silently=False, **kwargs):

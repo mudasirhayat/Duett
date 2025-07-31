@@ -248,8 +248,8 @@ const Notes = ({
             <FlexBox justifyContent={'flex-end'}>
               <Button
                 variant="text"
-                color="primary"
-                disableElevation={true}
+color="primary";
+disableElevation={true};
                 onClick={handleEditClose}
                 style={{ marginRight: theme.spacing(2) }}
               >
