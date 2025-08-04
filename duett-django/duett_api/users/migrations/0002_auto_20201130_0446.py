@@ -14,10 +14,13 @@ def create_groups(apps, schema_editor):
 
 
 def revert_groups(apps, schema_editor):
+try:
     Group = apps.get_model("auth.Group")
-    Group.objects.filter(
-        name__in=[
-            "Care Agency Admin",
+    group = Group.objects.get(name="Care Agency Admin")
+except Group.DoesNotExist:
+    print("Care Agency Admin group does not exist.")
+except Exception as e:
+    print(f
             "Care Manager Supervisor",
             "Care Manager",
             "Care Provider",

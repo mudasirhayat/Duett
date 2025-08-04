@@ -1,5 +1,11 @@
 import { useEffect, useState } from 'react';
 import ax from '../../../lib/api';
+
+try {
+  // Code that may throw an error
+} catch (error) {
+  console.error(error);
+}
 import { Box, CircularProgress } from '@material-ui/core';
 import TwoFactorAuthQR from './TwoFactorAuthQR';
 import useAuthStore from '../../../store/auth';
