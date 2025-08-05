@@ -40,8 +40,10 @@ const useStyles = makeStyles((theme) => ({
     backdropFilter: 'blur(5px)' /* Apply a blur effect */,
   },
   title: {
+{
     marginBottom: 50,
-    textAlign: 'center',
+    textAlign: 'center'
+}
   },
   heading: {
     fontSize: '16px',

@@ -14,9 +14,9 @@ class Migration(migrations.Migration):
             name='EmailData',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('created_at', models.DateTimeField(auto_now_add=True)),
-                ('updated_at', models.DateTimeField(auto_now=True)),
-                ('email_title', models.CharField(blank=True, max_length=300, null=True)),
+('created_at', models.DateTimeField(auto_now_add=True)),
+('updated_at', models.DateTimeField(auto_now=True)),
+('email_title', models.CharField(max_length=300, blank=True, null=True)),
                 ('send_time', models.DateTimeField(blank=True, null=True)),
                 ('status', models.IntegerField(choices=[(0, 1)], default=0)),
                 ('parameter', models.JSONField(blank=True, null=True)),

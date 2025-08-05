@@ -41,15 +41,8 @@ const NotifyRequestModalInsert = ({ services, confirm }) => {
         <Button
           variant="contained"
           color="primary"
-          disableElevation={true}
-          onClick={confirm}
-        >
-          Confirm
-        </Button>
-      </FlexBox>
-    </>
-  );
-};
+disableElevation={true}
+onClick={confirm}
 
 NotifyRequestModalInsert.propTypes = {
   confirm: PropTypes.func.isRequired,

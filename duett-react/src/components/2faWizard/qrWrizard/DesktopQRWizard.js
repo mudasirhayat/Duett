@@ -92,10 +92,8 @@ const QR2FAWizardDesktop = ({ open, setWizard }) => {
           {qrwizardSteps.map((step) => (
             <Step key={step.title}>
               <StepLabel>{step.title}</StepLabel>
+              {renderStepContent && renderStepContent()}
             </Step>
-          ))}
-        </Stepper>
-        {renderStepContent()}
         <Box
           display="flex"
           justifyContent="flex-end"
