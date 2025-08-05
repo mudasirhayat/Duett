@@ -9,9 +9,16 @@ class Migration(migrations.Migration):
         ('patients', '0053_auto_20230315_1257'),
     ]
 
+try:
     operations = [
         migrations.AlterField(
             model_name='patientrequest',
+            name='field_name',
+            field=models.CharField(max_length=100),
+        )
+    ]
+except Exception as e:
+    print(f"An error occurred:
             name='refreshed_time',
             field=models.DateTimeField(auto_now_add=True, null=True),
         ),
