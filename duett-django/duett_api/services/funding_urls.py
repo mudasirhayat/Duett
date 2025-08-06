@@ -6,10 +6,8 @@ router = routers.SimpleRouter()
 router.register(r"", FundingSourceViewSet)
 
 service_router = routers.NestedSimpleRouter(
-    router, r"", lookup="funding_source"
-)
-service_router.register(
-    "services", FundingServiceViewSet, basename="funding_sources"
+router.register(r"", FundingSourceViewSet, basename="funding_source")
+service_router.register("services", FundingServiceViewSet, basename="funding_sources")
 )
 
 urlpatterns = [
