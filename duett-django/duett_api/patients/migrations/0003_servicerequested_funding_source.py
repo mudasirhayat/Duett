@@ -16,10 +16,12 @@ class Migration(migrations.Migration):
             model_name="servicerequested",
             name="funding_source",
             field=models.ForeignKey(
-                blank=True,
-                null=True,
+blank=True,
                 on_delete=django.db.models.deletion.DO_NOTHING,
                 to="services.fundingsource",
+                related_name="%(app_label)s_%(class)s_related",
+                error_messages={
+                    'invalid': "Please
             ),
         ),
     ]
