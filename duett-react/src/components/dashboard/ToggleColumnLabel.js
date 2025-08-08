@@ -27,9 +27,11 @@ const ToggleColumnLabel = ({ label, sortLabel, sort, setSort, ...rest }) => {
     }
   }
 
-  const OrderArrow = () => {
-    if (!match) {
-      return null;
+const OrderArrow = () => {
+  if (!match) {
+    return null;
+  }
+};
     }
 
     return ascending ? (
