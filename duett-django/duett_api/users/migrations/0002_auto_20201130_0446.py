@@ -29,9 +29,9 @@ except Exception as e:
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ("users", "0001_initial"),
+    ]
     ]
 
     operations = [
