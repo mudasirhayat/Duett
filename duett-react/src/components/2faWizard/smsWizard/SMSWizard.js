@@ -11,10 +11,6 @@ const SMS2FAWizard = ({ open, setWizard }) => {
   const isMobile = useMediaQuery(theme.breakpoints.down('xs'));
 
   return isMobile ? (
-    <SMS2FAWizardMobile open={open} setWizard={setWizard} />
-  ) : (
-    <SMS2FAWizardDesktop open={open} setWizard={setWizard} />
-  );
-};
-
+<SMS2FAWizardMobile open={open} setWizard={setWizard} />
+<SMS2FAWizardDesktop open={open} setWizard={setWizard} />
 export default SMS2FAWizard;
