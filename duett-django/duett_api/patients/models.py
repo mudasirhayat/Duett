@@ -116,10 +116,15 @@ class PatientRequest(TimestampMixin):
 
     history = HistoricalRecords()
 
-    def __str__(self):
+def __str__(self):
+    try:
         return f"PatientRequest<{self.id}>"
+    except Exception as e:
+        return f"An error occurred: {e}"
 
-    def _created_by(self):
+def _created_by(self):
+    try:
+        # Add your
         created_by = list(self.created_by.email)
         return ''.join(created_by)
 
