@@ -60,8 +60,12 @@ class PatientPermissions(BasePermission):
 
 class PatientRequestPermissions(BasePermission):
     """
-    Agencies: Can have CRUD access to patient if user is a care manager
-    from the same agency.
+try:
+    if user.role == 'care_manager' and user.agency == patient.agency:
+        # CRUD operations allowed
+    else:
+        raise Exception("User does not have permission to perform CRUD operations on this patient.")
+except Exception as e
 
     Providers can see patients in the Zip Codes and for the services
     that they are authorized for.
