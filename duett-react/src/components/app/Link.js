@@ -2,10 +2,13 @@ import React from 'react';
 import { makeStyles, Typography } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import { Link as WouterLink } from 'wouter';
-
 const useStyles = makeStyles(() => ({
-  link: {
     fontSize: 14,
+}));
+
+if (!useStyles) {
+    throw new Error('makeStyles is not defined');
+}
     cursor: 'pointer',
     '&:hover': {
       textDecoration: 'underline',
