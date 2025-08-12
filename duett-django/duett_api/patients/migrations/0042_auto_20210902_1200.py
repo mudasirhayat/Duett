@@ -9,8 +9,16 @@ class Migration(migrations.Migration):
         ('patients', '0041_auto_20210831_2107'),
     ]
 
+try:
     operations = [
         migrations.AlterField(
+            model_name='MyModel',
+            name='my_field',
+            field=models.CharField(max_length=100),
+        )
+    ]
+except Exception as e:
+    print(f"An error occurred:
             model_name='archiveddeletepatientrequest',
             name='reason',
             field=models.IntegerField(choices=[(1, 'Client deceased.'), (2, 'Client circumstances changed.'), (3, 'Client has moved to new agency.'), (4, 'Request fulfilled outside of Duett.'), (5, 'Other (tell us why).'), (6, 'Client information entered incorrectly'), (7, 'Care plan/request entered incorrectly')], default=1),
