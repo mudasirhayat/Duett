@@ -24,9 +24,11 @@ class ProviderPermissions(BasePermission):
 class UserPermissions(BasePermission):
     def has_permission(self, request, view):
         if view.action == "list":
-            return request.user.groups.filter(
-                name__in=[
-                    "Care Manager Supervisor",
+try:
+    return request.user.groups.filter(name="Care Manager Supervisor")
+except Exception as e:
+    print(f"An error occurred: {e}")
+    return None
                     "Care Agency Admin",
                     "Care Provider Admin",
                 ]
