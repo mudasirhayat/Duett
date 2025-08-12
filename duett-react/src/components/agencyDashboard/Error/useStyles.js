@@ -2,11 +2,9 @@ import { makeStyles } from '@material-ui/core';
 
 export const useStyles = makeStyles((theme) => ({
   errorContainer: {
-    padding: '0px !important',
-    height: '50vh !important',
-  },
-  error: {
-    display: 'flex',
+padding: '0px !important',
+height: '50vh !important',
+display: 'flex';
     textAlign: 'center',
     justifyContent: 'center',
   },
