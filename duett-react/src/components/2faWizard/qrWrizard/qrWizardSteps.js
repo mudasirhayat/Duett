@@ -12,14 +12,9 @@ const qrWizardSteps = [
         </li>
         <li>Click the add "+" button on top right of app.</li>
         <li>Choose use other account option. </li>
-        <li>Camera screen for scaning QR will open.</li>
-      </ul>
-    ),
-  },
-  {
-    title: 'Configuring using Authenticator',
-    title2:
-      'You can go through the steps to configure two-factor authentication',
+<li>Camera screen for scanning QR code will open.</li>
+title: 'Configuring using Authenticator',
+'You can go through the steps to configure two-factor authentication',
     description: (
       <ul style={{ fontFamily: 'Arial', fontSize: '12px' }}>
         <li>Scan the QR on the configure QR page of Duett.</li>
