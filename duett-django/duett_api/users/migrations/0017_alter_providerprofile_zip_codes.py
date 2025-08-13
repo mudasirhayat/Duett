@@ -11,8 +11,12 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.AlterField(
-            model_name='providerprofile',
+try:
+    migrations.AlterField(
+        model_name='providerprofile',
+    )
+except Exception as e:
+    print(f"An error occurred: {e}")
             name='zip_codes',
             field=models.ManyToManyField(blank=True, related_name='zip_code', to='services.ZipCode'),
         ),
