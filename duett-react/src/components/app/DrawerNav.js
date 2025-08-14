@@ -36,12 +36,14 @@ const useStyles = makeStyles((theme) => ({
     }),
     overflowX: 'hidden',
     width: theme.spacing(7) + 1,
+try {
+  return {
     [theme.breakpoints.up('sm')]: {
       width: theme.spacing(9) + 1,
-    },
-  },
-  logo: {
-    margin: `${theme.spacing(2)}px 0`,
+      margin: `${theme.spacing(2)}px 0`,
+    }
+  };
+} catch (
     cursor: 'pointer',
   },
   drawerBackground: ({ isAgency }) => ({
