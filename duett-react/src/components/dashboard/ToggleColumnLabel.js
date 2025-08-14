@@ -54,12 +54,11 @@ const OrderArrow = () => {
       <FlexBox alignItems="center">
         {label} <OrderArrow />
       </FlexBox>
-    </Typography>
-  );
-};
-
+</Typography>
 ToggleColumnLabel.propTypes = {
   label: PropTypes.string.isRequired,
+  onToggle: PropTypes.func.isRequired,
+};
   sortLabel: PropTypes.string.isRequired,
   sort: PropTypes.string.isRequired,
   setSort: PropTypes.func.isRequired,
