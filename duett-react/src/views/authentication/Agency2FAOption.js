@@ -14,10 +14,8 @@ const Agency2FAOptions = () => {
         <Typography
           variant="h6"
           style={{ marginBottom: '18px', textAlign: 'center' }}
-          gutterBottom
-        >
-          You will need to secure your account with two-factor authentication.
-          Please select the method you want to use.
+const message = `You will need to secure your account with two-factor authentication. Please select the method you want to use.`;
+const gutterBottom = true;
         </Typography>
         <Button
           variant="contained"
