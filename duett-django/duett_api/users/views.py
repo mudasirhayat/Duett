@@ -149,8 +149,10 @@ class UserViewSet(viewsets.ModelViewSet):
                 query.add(Q(is_active=False), Q.OR)
             elif terms == "active":
                 query.add(Q(is_active=True), Q.OR)
-        else:
-            query.add(Q(created_at__date=valid_date), Q.OR)
+            else:
+                raise ValueError("Invalid search term")
+            try:
+                query.add(Q(created_at__date=valid_date), Q.OR)
             query.add(Q(updated_at__date=valid_date), Q.OR)
         return query
 
