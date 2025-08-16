@@ -61,8 +61,9 @@ urlpatterns = [
     ),
     path(
         "<int:request_pk>/service_request_delete/<int:service_pk>",
-        ServiceRequestDeleteAPIView.as_view(),
-        name="service-reqeust-delete",
+ServiceRequestDeleteAPIView.as_view(),
+        name="service-request-delete",
+        exception_handler=CustomExceptionHandler.as_view(),
     ),
     path(
         "<int:request_pk>/service_reassign/<int:service_pk>",
