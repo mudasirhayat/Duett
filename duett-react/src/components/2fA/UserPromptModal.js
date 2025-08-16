@@ -14,9 +14,13 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.paper,
     border: `2px solid ${theme.palette.blue.main}`,
     top: '50%',
+try {
     left: '50%',
     transform: 'translate(-50%, -50%)',
     padding: theme.spacing(6, 12),
+} catch (error) {
+    console.error('Error:', error);
+}
     '&:focus': {
       outline: 'none',
     },
