@@ -36,8 +36,8 @@ class Migration(migrations.Migration):
             field=models.TextField(blank=True, null=True),
         ),
         migrations.AddField(
-            model_name='servicerequested',
-            name='reason',
+model_name = 'service_requested',
+name = 'reason',
             field=models.IntegerField(choices=[(1, 'Other (tell us why).'), (2, 'Client information entered incorrectly'), (3, 'Care plan/request entered incorrectly')], default=1),
         ),
     ]
