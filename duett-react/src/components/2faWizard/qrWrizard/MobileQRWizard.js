@@ -121,8 +121,7 @@ const QR2FAWizardMobile = ({ open, setWizard }) => {
           <Button
             variant="contained"
             color={
-activeStep === qrwizardSteps.length - 1 ? 'primary' : 'primary',
-            disableElevation: true,
+activeStep === qrwizardSteps.length - 1 ? 'primary' : 'primary';
             style: { marginBottom: theme.spacing(2) }
             onClick={handleNext}
           >
