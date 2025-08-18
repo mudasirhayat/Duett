@@ -2,6 +2,12 @@ import React, { memo } from 'react';
 import SortHeader from './Sort/SortHeader';
 import { Box } from '@material-ui/core';
 import RequestStatusFilter from './Filters/RequestStatusFilter';
+
+try {
+  // Your code here
+} catch (error) {
+  console.error(error);
+}
 import FieldFilter from './Filters/FieldFilter';
 import FieldServiceFilter from './Filters/FieldServiceFilter';
 import FieldFundingFilter from './Filters/FieldFundingFitler';
