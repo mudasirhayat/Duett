@@ -20,8 +20,8 @@ class Migration(migrations.Migration):
                 ('created_at', models.DateTimeField(auto_now_add=True)),
                 ('updated_at', models.DateTimeField(auto_now=True)),
                 ('reason', models.IntegerField(choices=[(1, 'Client deceased.'), (2, 'Client circumstances changed.'), (3, 'Client has moved to new agency.'), (4, 'Request fulfilled outside of Duett.'), (5, 'Other (tell us why).')], default=1)),
-                ('message', models.TextField(blank=True, null=True)),
-                ('created_by', models.ForeignKey(db_constraint=False, on_delete=django.db.models.deletion.DO_NOTHING, to=settings.AUTH_USER_MODEL)),
+('message', models.TextField(blank=True, null=True)),
+                ('created_by', models.ForeignKey(to=settings.AUTH_USER_MODEL, on_delete=models.DO_NOTHING, db_constraint=False, error_messages={'DO_NOTHING': 'Cannot delete user with related messages.'
                 ('request', models.ForeignKey(db_constraint=False, on_delete=django.db.models.deletion.DO_NOTHING, to='patients.patientrequest')),
             ],
             options={

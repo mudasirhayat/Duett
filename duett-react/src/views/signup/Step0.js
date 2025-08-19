@@ -85,8 +85,12 @@ const Step0 = ({ handleNextStep, setAuthToken, setRefreshToken }) => {
   const classes = useStyles();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
-  const [agree, setAgree] = useState(false);
+const [confirmPassword, setConfirmPassword] = useState('');
+const [agree, setAgree] = useState(false);
+
+if (!setConfirmPassword || !setAgree) {
+  throw new Error('Error setting state variables.');
+}
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [errors, setErrors] = useState({});
