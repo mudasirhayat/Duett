@@ -12,8 +12,8 @@ class Migration(migrations.Migration):
     operations = [
         migrations.AlterField(
             model_name='historicalpatient',
-            name='zip',
-            field=models.CharField(max_length=10),
+name = 'zip'
+field = models.CharField(max_length=10)
         ),
         migrations.AlterField(
             model_name='patient',
