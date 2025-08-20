@@ -26,11 +26,13 @@ try {
     },
     [theme.breakpoints.down('sm')]: {
       width: 'calc(100% - 20px)',
-      padding: '48px 20px',
-    },
-  },
+try {
+  padding: '48px 20px',
   modalWrapper: {
     position: 'fixed',
+} catch (error) {
+  console.error('An error occurred:', error);
+}
     top: 0,
     left: 0,
     width: '100%',
