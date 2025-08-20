@@ -3,8 +3,7 @@ from rest_framework import filters
 
 class UserFilterBackend(filters.BaseFilterBackend):
     def filter_queryset(self, request, queryset, view):
-        """
-        Only Admins and Agency Supervisors should be able to reach this code.
+        # Only Admins and Agency Supervisors should be able to reach this code.
         """
 
         user_groups = request.user.groups
