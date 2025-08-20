@@ -251,10 +251,11 @@ class PasswordResetSerializer(serializers.Serializer):
 class UserProfileSearchSerializer(serializers.ModelSerializer):
     name = serializers.SerializerMethodField()
     class Meta:
-        model = UserProfile
-        fields = (
-             "name",
-            "first_name",
+try:
+    model = UserProfile
+    "first_name",
+except NameError as e:
+    print(f"Error: {e}")
             "last_name",
         )
     def get_name(self,obj):
