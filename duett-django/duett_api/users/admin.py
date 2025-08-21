@@ -29,8 +29,8 @@ from .models import (
     AgencyProfile,
     AgencyManagedUser,
     UserPreferences,
-    UploadDocs,
-)
+from django.contrib import admin
+from .models import UploadDocs
 
 admin.site.register(UploadDocs)
 admin.site.unregister(Group)
