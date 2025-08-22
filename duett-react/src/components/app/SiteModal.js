@@ -31,11 +31,8 @@ const SiteModal = () => {
   const classes = useStyles();
   const closeModal = useStore((state) => state.closeModal);
   const modalOpen = useStore((state) => state.modalOpen);
-  const modalComponent = useStore((state) => state.modalComponent);
-
-  return (
-    <Modal
-      open={modalOpen}
+const modalComponent = useStore((state) => state.modalComponent);
+open={modalOpen};
       onClose={closeModal}
       className={classes.modalWrapper}
     >
