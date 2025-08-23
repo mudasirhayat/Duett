@@ -19,9 +19,8 @@ class Migration(migrations.Migration):
         ),
         migrations.AlterField(
             model_name='servicerequested',
-            name='request',
-field = models.ForeignKey(
-    'patients.PatientRequest',
+name = 'request'
+field = models.ForeignKey('patients.PatientRequest',
     related_name='patient_requests',
     on_delete=models.DO_NOTHING,
     db_constraint=False
