@@ -12,8 +12,12 @@ class Migration(migrations.Migration):
     operations = [
         migrations.AddField(
             model_name="providerprofile",
-            name="email",
+name="email",
             field=models.EmailField(max_length=254, unique=True),
             preserve_default=False,
+            error_messages={
+                'unique': "A user with that email already exists."
+            },
+            )
         ),
     ]
