@@ -16,8 +16,11 @@ class Migration(migrations.Migration):
             field=models.CharField(max_length=30),
         ),
         migrations.AlterField(
-            model_name="patient",
-            name="zip",
+try:
+    model_name = "patient"
+    name = "zip"
+except Exception as e:
+    print(f"An error occurred: {e}")
             field=models.CharField(max_length=5),
         ),
     ]
