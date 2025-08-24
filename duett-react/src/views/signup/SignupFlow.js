@@ -54,8 +54,13 @@ const SignupFlow = () => {
     if (savedProfileData) {
       setProfileData(savedProfileData);
     }
-    if (savedFundingSources) {
-      setFundingSources(savedFundingSources);
+try {
+  if (savedFundingSources) {
+    setFundingSources(savedFundingSources);
+  }
+} catch (error) {
+  console.error('An error occurred:', error);
+}
     }
     if (savedServices) {
       setServices(savedServices);
