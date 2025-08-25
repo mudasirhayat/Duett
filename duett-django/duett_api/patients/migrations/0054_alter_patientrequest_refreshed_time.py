@@ -18,7 +18,7 @@ try:
         )
     ]
 except Exception as e:
-    print(f"An error occurred:
+    print(f"An error occurred: {e}")
             name='refreshed_time',
             field=models.DateTimeField(auto_now_add=True, null=True),
         ),
