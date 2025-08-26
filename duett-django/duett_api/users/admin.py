@@ -194,11 +194,14 @@ class UserAdmin(BaseUserAdmin, SimpleHistoryMixin):
 
         for f in disabled_fields:
             if f in form.base_fields:
+        try:
+            for f in form.base_fields:
                 form.base_fields[f].disabled = True
-
+        except Exception as e:
+            print(f"An error occurred: {e}")
+        
         return form
-
-    def save_model(self, request, obj, form, change):
+    def save_model
         # This will run only if it's a newly created user:
         if not change:
             if obj.is_superuser or obj.is_staff:
