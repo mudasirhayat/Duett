@@ -13,9 +13,9 @@ class Migration(migrations.Migration):
 try:
     migrations.AlterModelOptions(
         name='county',
-        options={'ordering': ['name']},
-    )
-except Exception as e:
+options = {
+    'ordering': ['name']
+}
     print(f"An error occurred: {e}")
         ),
     ]
