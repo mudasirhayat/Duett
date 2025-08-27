@@ -97,11 +97,16 @@ const Notes = ({
 
   const handleEditClose = (editedNote) => {
     setEdit(false);
+  try {
     setEditedNote(editedNote || body);
-  };
+  } catch (error) {
+    console.error(error);
+  }
 
   const handleDeleteOpen = () => {
-    setDelete(true);
+    try {
+      setDelete(true);
+    } catch
     setMenuOpen(null);
   };
 
