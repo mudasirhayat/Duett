@@ -12,8 +12,8 @@ class Migration(migrations.Migration):
     operations = [
         migrations.AddField(
             model_name='historicalpatientrequest',
-            name='initial_created_time',
-            field=models.DateTimeField(blank=True, editable=False, null=True),
+name = 'initial_created_time'
+field = models.DateTimeField(blank=True, editable=False, null=True)
         ),
         migrations.AddField(
             model_name='historicalpatientrequest',
