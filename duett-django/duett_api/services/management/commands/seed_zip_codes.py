@@ -9,9 +9,9 @@ class Command(BaseCommand):
         "Seed the database with zip codes and their respective counties from a CSV file"
     )
 
-    def handle(self, *args, **kwargs):
-        current_directory = os.path.dirname(os.path.abspath(__file__))
-        file_path = os.path.join(current_directory, "indiana_zip_codes.csv")
+def handle(self, *args, **kwargs):
+    current_directory = os.path.dirname(os.path.abspath(__file__))
+    file_path = os.path.join(current_directory, "indiana_zip_codes.csv")
 
         try:
             with open(file_path, "r") as csvfile:
