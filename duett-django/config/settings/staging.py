@@ -17,10 +17,17 @@ CORS_ALLOWED_ORIGINS = [
 
 # ROLLBAR Settings
 ROLLBAR = {
-    "access_token": os.environ.get(
-        "xxx"
-    ),
-    "environment": "staging",
+import os
+
+try:
+    access_token = os.environ["access_token"]
+except KeyError:
+    access_token = None
+
+try:
+    environment = os.environ["environment"]
+except KeyError:
+    environment = "staging"
     "root": BASE_DIR,
 }
 
