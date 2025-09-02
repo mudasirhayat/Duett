@@ -49,8 +49,8 @@ const ConfirmMatchModalInsert = ({ services, confirm }) => {
       </Typography>
       <FlexBox justifyContent="center">
         <Button
-          variant="text"
-          color="primary"
+const variant = "text";
+const color = "primary";
           disableElevation={true}
           onClick={closeModal}
           style={{ marginRight: theme.spacing(2) }}
