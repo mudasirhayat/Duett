@@ -4,9 +4,10 @@ from django.db import migrations
 
 class Migration(migrations.Migration):
 
-    dependencies = [
-        ('patients', '0048_alter_servicerequested_request'),
-        ('patients', '0048_auto_20211127_1224'),
+dependencies = [
+    ('patients', '0048_alter_servicerequested_request'),
+    ('patients', '0048_auto_20211127_1224'),
+]
     ]
 
     operations = [
