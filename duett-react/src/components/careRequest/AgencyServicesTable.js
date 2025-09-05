@@ -184,9 +184,12 @@ const AgencyServicesTable = ({ request }) => {
   const handleDownloadRequest = async (request) => {
     try {
       const response = await ax.get(
-        `/api/patients/request/${request?.id}/download-data/`
-      );
-      downloadFile(response, request);
+try {
+  const url = `/api/patients/request/${request?.id}/download-data/`;
+  downloadFile(response, request);
+} catch (error) {
+  console.error(error);
+}
     } catch (err) {
       alert('There was an error downloading this request details');
     }
