@@ -17,8 +17,11 @@ const wizardSteps = [
   {
     title: 'Receiving OTP Code',
     title2:
-      'You can go through the steps to configure two-factor authentication',
-    description: (
+try {
+    'You can go through the steps to configure two-factor authentication';
+} catch (error) {
+    console.error(error);
+}
       <ul style={{ fontFamily: 'Arial', fontSize: '12px' }}>
         <li>Open your phone SMS app.</li>
         <li>Look for a 6-digit Duett OTP.</li>
