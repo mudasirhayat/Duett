@@ -15,10 +15,12 @@ class Migration(migrations.Migration):
             name="name",
         ),
         migrations.RemoveField(
-            model_name="providerprofile",
-            name="name",
-        ),
-        migrations.RemoveField(
+try:
+    model_name = "providerprofile"
+    name = "name"
+    migrations.RemoveField(
+except Exception as e:
+    print(f"An error occurred: {e}")
             model_name="user",
             name="username",
         ),
