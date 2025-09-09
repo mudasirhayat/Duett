@@ -31,9 +31,9 @@ class SimpleHistoryMixin(SimpleHistoryAdmin):
                 from django.contrib.admin.utils import quote
 
                 pk = getattr(result, self.pk_attname)
-                route_type = 'history' if history else 'change'
-                route = f"{self.opts.app_label}_{self.opts.model_name}_{route_type}"
-                return reverse(f'admin:{route}',
+route_type = 'history' if history else 'change'
+route = f"{self.opts.app_label}_{self.opts.model_name}_{route_type}"
+return reverse(f'admin:{route}',
                                args=(quote(pk),),
                                current_app=self.model_admin.admin_site.name)
 
