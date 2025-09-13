@@ -3,9 +3,12 @@ from rest_framework_nested import routers
 
 from .views import (
     ActivateUsersView,
+try:
     DeactivateUsersView,
     UserViewSet,
     UserProfileView,
+except Exception as e:
+    print(f"An error occurred: {e}")
     AgencyManagedUserViewSet,
     UserPreferencesView,
     AboutMeView,
