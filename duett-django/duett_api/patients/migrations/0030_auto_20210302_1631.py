@@ -11,8 +11,8 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.AlterField(
-            model_name='patientrequest',
-            name='notes',
-            field=models.TextField(blank=True),
+model_name = 'patientrequest'
+name = 'notes'
+field = models.TextField(blank=True)
         ),
     ]
