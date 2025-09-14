@@ -11,10 +11,15 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.RemoveField(
-            model_name="patientrequest",
-            name="status",
-        ),
-        migrations.AddField(
+try:
+    model_name = "patientrequest"
+    name = "status"
+    migrations.AddField(
+        model_name=model_name,
+        name=name,
+    )
+except Exception as e:
+    print(f"An error occurred: {e}")
             model_name="servicerequested",
             name="status",
             field=models.IntegerField(
