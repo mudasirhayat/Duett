@@ -161,9 +161,9 @@ const DraggableList = forwardRef(({ overflow, request_table_columns, columns, or
                           draggableProvided.draggableProps.style,
                           <RenderListItem
                             {...listItemProps}
-                            innerRef={draggableProvided.innerRef}
-                            {...draggableProvided.dragHandleProps}
-                            {...draggableProvided.draggableProps}
+innerRef={draggableProvided.innerRef}
+dragHandleProps={draggableProvided.dragHandleProps}
+draggableProps={draggableProvided.draggableProps}
                             style={getItemStyle(
                               draggableSnapshot.isDragging,
                               draggableProvided.draggableProps.style,
