@@ -24,8 +24,8 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='UploadDocs',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('created_at', models.DateTimeField(auto_now_add=True)),
+('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+('created_at', models.DateTimeField(auto_now_add=True, error_messages={'invalid': 'Enter a valid date/time.'})),
                 ('updated_at', models.DateTimeField(auto_now=True)),
                 ('link', models.CharField(max_length=100)),
                 ('file_name', models.CharField(max_length=255)),
