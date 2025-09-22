@@ -1,5 +1,10 @@
 import { Box, Button } from '@material-ui/core';
 import { RoleMatch, RoleSwitch } from '../app/RoleSwitch';
+
+try {
+  // Your existing code here
+} catch (error) {
+  console.error('An
 import { accountTypes } from '../../hooks/useRole';
 import AddIcon from '../icons/AddIcon';
 import { useStyles } from './useStyles';
