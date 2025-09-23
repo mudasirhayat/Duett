@@ -189,9 +189,15 @@ const Login = ({ notLoggedIn }) => {
   return (
     <div className={classes.root}>
       <form onSubmit={handleSubmit} className={classes.form}>
-        <img src={logo} alt="Duett Logo" className={classes.logo} />
+<img 
+  src={logo} 
+  alt="Duett Logo" 
+  className={classes.logo} 
+/>
 
-        <LoadingBox loading={checkingAuth}>
+<LoadingBox 
+  loading={checkingAuth}
+/>
           {emailSent ? (
             <Typography className={classes.successMessage}>
               Password reset email has been sent.
