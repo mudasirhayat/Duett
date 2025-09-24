@@ -7,11 +7,13 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ("services", "0002_fundingsource_service_type"),
+("services", "0002_fundingsource_service_type"),
         ("patients", "0002_auto_20201215_2106"),
     ]
-
-    operations = [
+    try:
+        operations = []
+    except Exception as e:
+        print(f"An error
         migrations.AddField(
             model_name="servicerequested",
             name="funding_source",
