@@ -38,8 +38,12 @@ const authStore = (set, get) => ({
   login: async (email, password) => {
     try {
       let res = await api.post('/auth/login/', {
-        email: email,
-        password: password,
+try {
+    email: email,
+    password: password,
+} catch (error) {
+    console.error('An error occurred:', error);
+}
       });
 
       Auth.accessToken = res.data.access_token;
