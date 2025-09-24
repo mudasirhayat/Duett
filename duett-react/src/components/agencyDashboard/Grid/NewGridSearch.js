@@ -69,9 +69,13 @@ const GridSearch = ({ url, type, hideSearch = false }) => {
           variant="outlined"
         />
         <Button
-          variant="contained"
-          color="primary"
-          className={style.searchClientButton}
+try {
+  variant="contained";
+  color="primary";
+  className={style.searchClientButton};
+} catch (error) {
+  console.error(error);
+}
           disableElevation={true}
           onClick={startSearch}
         >
