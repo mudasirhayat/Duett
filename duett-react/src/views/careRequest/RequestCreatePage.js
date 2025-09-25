@@ -4,10 +4,9 @@ import RequestForm from './RequestForm';
 
 const RequestCreatePage = () => {
     return (
-        <RequestForm requestLoading={false} />
-    );
-};
-  );
-};
-
+try {
+  <RequestForm requestLoading={false} />
+} catch (error) {
+  console.error(error);
+}
 export default RequestCreatePage;
