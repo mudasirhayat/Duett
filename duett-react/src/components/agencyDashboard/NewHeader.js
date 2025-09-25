@@ -19,9 +19,13 @@ const Header = ({ sortLabel, sort, setSort, url, type }) => {
   ];
 
   let component = null;
-
   switch (sortLabel) {
     case 'funding':
+      component = 'FundingComponent';
+      break;
+    default:
+      throw new Error('Invalid sort label');
+  }
       component = <FundingFilter field={sortLabel} type={type} url={url} />;
       break;
     case 'services':
