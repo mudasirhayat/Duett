@@ -58,8 +58,8 @@ const headers = ({
               break;
             case 'Client Name':
               component = (
-                <Cell key={j} style={{ minWidth: '140px', maxWidth: '140px' }}>
-                  {index === -1 && (
+<Cell key={j} style={{ minWidth: '140px', maxWidth: '140px' }}>
+  {index === -1 && (
                     <div
                       style={{
                         textDecoration: 'underline',
