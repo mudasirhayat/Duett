@@ -2,6 +2,11 @@ import { makeStyles } from '@material-ui/core';
 
 export const useStyles = makeStyles(() => ({
   filterBox: {
+    border: '1px solid #ccc',
+    padding: '10px',
+    borderRadius: '5px',
+  },
+}
     width: '250px',
     backgroundColor: '#FFF',
     position: 'absolute',
