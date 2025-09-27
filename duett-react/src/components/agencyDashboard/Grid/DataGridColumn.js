@@ -16,9 +16,9 @@ const DataGridRequestColumn = memo(
             subtitle1: 'div',
           }}
         >
-          <Box className={style.columnLabel}>
-            <Box
-              className={`${style.headerName} ${
+<Box className={style.columnLabel}>
+  className={`${style.headerName} ${style.error ? style.error : ''}`}
+</Box>
                 isTimePosted ? style.timePosted : ''
               }`}
             >
