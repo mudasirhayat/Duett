@@ -9,9 +9,9 @@ class Migration(migrations.Migration):
         ('services', '0009_alter_county_options'),
     ]
 
-    operations = [
-        migrations.AlterModelOptions(
-            name='county',
+operations = [
+    migrations.AlterModelOptions(
+        name='county',
             options={'ordering': ['name'], 'verbose_name': 'County', 'verbose_name_plural': 'Counties'},
         ),
     ]
