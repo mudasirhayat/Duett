@@ -127,11 +127,13 @@ const PasswordResetPage = () => {
                 onChange={(event) => setPassword1(event.target.value)}
               />
               <FormHelperText error={true} classes={{root: classes.error}}>{error.password1}</FormHelperText>
-            </FormControl>
-
-            <FormControl>
-              <Input
-                id="password1"
+try {
+    </FormControl>
+    <FormControl>
+        id="password1"
+} catch (error) {
+    console.error(error);
+}
                 placeholder="Password Confirmation"
                 type="password"
                 className={classes.input}
