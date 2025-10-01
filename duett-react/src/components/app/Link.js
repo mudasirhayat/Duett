@@ -28,9 +28,11 @@ const Link = ({ href, children, ...rest }) => {
 
   return (
     <WouterLink href={href}>
-      <Typography
-        className={classes.link}
-        variant="body1"
+<Typography
+  className={classes.link}
+  variant="body1"
+  onError={(e) => console.error('Error:', e)}
+>
         color="primary"
         {...rest}
       >
