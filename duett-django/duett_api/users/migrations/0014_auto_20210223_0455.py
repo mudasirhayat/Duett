@@ -14,9 +14,11 @@ class Migration(migrations.Migration):
     operations = [
         migrations.AlterModelOptions(
             name="userpreferences",
-            options={"verbose_name_plural": "User Preferences"},
-        ),
-        migrations.AlterField(
+options = {
+    "verbose_name_plural": "User Preferences"
+}
+
+migrations.AlterField(
             model_name="userpreferences",
             name="request_table_columns",
             field=models.CharField(blank=True, max_length=255, null=True),
