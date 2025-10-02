@@ -42,6 +42,13 @@ class ServiceRequestedFactory(DjangoModelFactory):
     class Meta:
         model = ServiceRequested
 
+    @classmethod
+    def create(cls, **kwargs):
+        try:
+            return super().create(**kwargs)
+        except Exception as e:
+            print
+
     hours = factory.fuzzy.FuzzyInteger(1, 19)
     frequency = factory.fuzzy.FuzzyChoice([1, 2])
     request = factory.SubFactory(PatientRequestFactory)
