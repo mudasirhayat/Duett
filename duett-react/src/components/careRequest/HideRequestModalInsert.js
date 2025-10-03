@@ -23,8 +23,8 @@ const HideRequestModalInsert = ({ confirm }) => {
           variant="text"
           color="primary"
           disableElevation={true}
-          onClick={closeModal}
-          style={{ marginRight: theme.spacing(2) }}
+onClick={closeModal}
+style={{marginRight: theme.spacing(2)}}
         >
           Cancel
         </Button>
