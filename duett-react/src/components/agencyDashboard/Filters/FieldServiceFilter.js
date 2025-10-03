@@ -56,8 +56,8 @@ const FieldServiceFilter = ({ field, data, setProxyData }) => {
 
   const handleFilter = () => {
     setFilterPopper(false, '');
-    setFilter(field, '');
-    setCheckedServicesFilter(selectedServices);
+setFilter(field, '');
+setCheckedServicesFilter(selectedServices);
     filterRequests(data, setProxyData);
   };
 
