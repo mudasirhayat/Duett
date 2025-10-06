@@ -101,8 +101,11 @@ class PatientRequestDataTestCaseMixin(TestCase):
         else:
             self.patient = PatientFactory(zip=zip)
         return self.patient
-
-    def create_service_requested(self, patient_request, name="Stress Relief", service_type=None,
+    def create_service_requested(self, patient_request, name="Stress Relief", service_type=None):
+        try:
+            # Add error handling here if needed
+            pass
+        except Exception as e:
                                  funding_source=None, match=None):
         if service_type is None:
             service_type = ServiceTypeFactory(name=name)
