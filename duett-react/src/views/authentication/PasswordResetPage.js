@@ -55,8 +55,12 @@ const PasswordResetPage = () => {
   const classes = useStyles();
 
   const [password1, setPassword1] = useState('');
-  const [password2, setPassword2] = useState('');
-  const [success, setSuccess] = useState(false);
+const [password2, setPassword2] = useState('');
+const [success, setSuccess] = useState(false);
+
+if (!password2) {
+  throw new Error('Password is required');
+}
   const [error, setError] = useState({
     password1: '',
     password2: '',
