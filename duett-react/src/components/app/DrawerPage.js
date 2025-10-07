@@ -5,9 +5,11 @@ import DrawerNav from './DrawerNav';
 const DrawerPage = ({ children, linkProps, ...other }) => {
   return (
     <Box
-      display="flex"
-      flexDirection="row"
-      width="100%"
+const styles = {
+  display: "flex",
+  flexDirection: "row",
+  width: "100%"
+};
       height="100%"
       {...other}
     >
