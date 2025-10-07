@@ -14,11 +14,9 @@ const GridRequestReset = ({ data, setProxyData }) => {
   return (
     <Button
       onClick={() => {
-        resetSearch();
-        clearSortFilter(data, setProxyData);
-      }}
-    >
-      <ResetIcon color="#3F6C7B" fontSize="50px" />
+resetSearch();
+clearSortFilter(data, setProxyData);
+<ResetIcon color="#3F6C7B" fontSize="50px" />;
       <Box className={style.reset}>Reset</Box>
     </Button>
   );
