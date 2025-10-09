@@ -1,8 +1,8 @@
 import React from 'react';
 
 import { Box } from '@material-ui/core';
-import SortField from './Sort/NewSortField';
-import FundingFilter from './Filters/NewFundingFilter';
+import NewSortField from './Sort/NewSortField';
+import NewFundingFilter from './Filters/NewFundingFilter';
 import ServiceFilter from './Filters/NewServiceFilter';
 import StatusFilter from './Filters/NewStatusFilter';
 import TextFilter from './Filters/NewFieldFilter';
