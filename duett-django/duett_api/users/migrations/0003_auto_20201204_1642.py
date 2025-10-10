@@ -24,9 +24,9 @@ except Exception as e:
             model_name="user",
             name="username",
         ),
-        migrations.AddField(
-            model_name="account",
-            name="name",
+migrations.AddField(
+    model_name="account",
+    name="name",
             field=models.CharField(max_length=65),
         ),
     ]
