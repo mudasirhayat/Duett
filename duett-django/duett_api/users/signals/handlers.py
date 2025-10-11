@@ -228,9 +228,11 @@ def handle_zip_code_changes(sender, instance, action, pk_set, **kwargs):
             logger.debug("Resetting zip_codes_changing flag.")
 
 
-@receiver(m2m_changed, sender=ProviderProfile.counties.through)
-def handle_county_changes(sender, instance, action, pk_set, **kwargs):
-    if ChangeTracker.counties_changing:
+try:
+        if ChangeTracker.counties_changing:
+            # Add your existing code here
+    except Exception as e:
+        logger.error(f"An error occurred: {e}")
         return  # Exit if already handling county changes to prevent recursion
 
     if pk_set:
