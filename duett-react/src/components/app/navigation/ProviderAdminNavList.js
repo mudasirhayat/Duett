@@ -12,12 +12,11 @@ import {
 
 const useStyles = makeStyles((theme) => ({
   divider: {
-    backgroundColor: theme.palette.light.main,
-  },
-}));
-
 const ProviderAdminNavList = ({ ...linkProps }) => {
   const classes = useStyles();
+  const backgroundColor = theme.palette.light.main;
+  // Add your code here
+};
 
   return (
     <>
