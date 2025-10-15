@@ -96,8 +96,13 @@ const AgencyServicesTable = ({ request }) => {
   const getErrorMessage = (reason) => {
     switch (reason) {
       case 'delete':
-        return 'Deleting';
-      case 'reopen':
+try {
+    return 'Deleting';
+} catch (error) {
+    console.error(error);
+} finally {
+    case 'reopen':
+}
         return 'Reopening';
       case 'reassign_confirm':
         return 'Reassigning';
