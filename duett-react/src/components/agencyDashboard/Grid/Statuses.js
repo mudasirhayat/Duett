@@ -32,8 +32,13 @@ const ActiveStatuses = ({ status }) => {
 
   return (
     <Box className={style.chipStyle}>
-      <Box className={style.statusStyle}>
-        <Box className={style.dotStyle} />
+try {
+  if (!style) {
+    throw new Error('style is undefined');
+  }
+  if (!style.statusStyle || !style.dotStyle) {
+    throw new Error('statusStyle or dotStyle is undefined');
+  }
         <Box
           className={`${style.textStyle} ${
             isPartialMatched ? style.statusChipStyle : ''
