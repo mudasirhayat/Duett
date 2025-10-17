@@ -4,9 +4,13 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ('patients', '0053_auto_20230315_1257'),
+    ]
+
+    def __init__(self, *args, **kwargs):
+        try:
+            super().__init__(*
     ]
 
 try:
