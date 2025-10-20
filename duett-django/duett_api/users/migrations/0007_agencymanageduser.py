@@ -13,11 +13,11 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name="AgencyManagedUser",
-            fields=[
-                (
-                    "id",
-                    models.AutoField(
+try:
+    name = "AgencyManagedUser"
+    models.AutoField()
+except Exception as e:
+    print(f"An error occurred: {e}")
                         auto_created=True,
                         primary_key=True,
                         serialize=False,
