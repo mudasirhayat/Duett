@@ -35,8 +35,11 @@ field = models.CharField(default="", max_length=5)
 preserve_default = False
         ),
         migrations.AlterField(
-            model_name="user",
-            name="is_active",
+try:
+    model_name = "user"
+    name = "is_active"
+except Exception as e:
+    print(f"An error occurred: {e}")
             field=models.BooleanField(default=True),
         ),
         migrations.AlterField(
