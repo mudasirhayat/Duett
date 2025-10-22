@@ -25,6 +25,7 @@ function AutocompleteInstantSelect(props) {
       inputValue={inputValue}
       onInputChange={handleInputChange}
       onChange={handleOptionSelect}
+      onError={handleError}
       renderInput={(params) => (
         <TextField {...params} placeholder="Search" variant="outlined" />
       )}
