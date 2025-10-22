@@ -237,8 +237,13 @@ const RequestDetailPage = () => {
     }
   };
   const setParamsRequests = (params) => {
-    if (params) {
-      params = JSON.parse(params);
+try {
+  if (params) {
+    params = JSON.parse(params);
+  }
+} catch (error) {
+  console.error('Error parsing JSON:', error);
+}
       setParams(params);
     }
   };
