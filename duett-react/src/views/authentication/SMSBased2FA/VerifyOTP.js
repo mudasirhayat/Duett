@@ -60,12 +60,10 @@ const VerifyOTP = () => {
         localStorage.setItem('expiration', expiration);
       })
       .catch((error) => {
-        setOtpLoading(false);
-      });
-  };
-
-  const handleVerifyOTP = (user_id, otp) => {
+    setOtpLoading(false);
     if (!verifyOTP) {
+        throw new Error('verifyOTP function is not defined');
+    }
       setError(true);
       setErrorText(
         'Please provide the authentication code to complete your login'
