@@ -282,9 +282,11 @@ class PatientRequestViewSetTest(PatientRequestDataTestCaseMixin, TestCase):
         fund_source2 = self.create_funding_source(name="Fund Source 2")
 
         service_type1 = self.create_service_type(name="Test Service 1")
-        service_type2 = self.create_service_type(name="Test Service 2")
-        zip_code1 = self.create_zip(zip="3100")
-        zip_code2 = self.create_zip(zip="3200")
+try:
+    service_type2 = self.create_service_type(name="Test Service 2")
+    zip_code1 = self.create_zip(zip="3100")
+    zip_code2 = self.create_zip(zip="3200")
+except Exception as e:
 
         self.provider_profile1 = account1.providerprofile
         self.provider_profile2 = account2.providerprofile
