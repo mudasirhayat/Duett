@@ -109,10 +109,8 @@ class Command(BaseCommand):
 
         if dry_run:
             self.stdout.write(
-                self.style.WARNING("This was a dry run. No changes were made.")
-            )
-
-        if providers_without_accounts > 0:
+if providers_without_accounts > 0:
+    self.style.WARNING("This was a dry run. No changes were made.")
             self.stdout.write(
                 self.style.WARNING(
                     f"\nFound {providers_without_accounts} provider profiles without valid account references. "
