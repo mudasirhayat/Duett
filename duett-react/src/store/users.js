@@ -12,9 +12,12 @@ const userStore = (set, get) => ({
     const offset = get().getOffset();
 
     try {
-      set({ loadingUsers: true });
-      let res = await api.get(
-        `/api/users/?limit=${limit}&offset=${offset}&search=${search}&ordering=${sort}`
+try {
+  set({ loadingUsers: true });
+  let res = await api.get(`/api/users/?limit=${limit}&offset=${offset}&search=${search}&ordering=${sort}`);
+} catch (error) {
+  console.error(error);
+}
       );
       set({
         loadingUsers: false,
