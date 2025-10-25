@@ -20,9 +20,9 @@ def create_table_columns(apps, schema_editor):
                 name="Care Manager Name",
                 sequence=2,
                 role=1,
-                table_name=1,
-                column_type=1,
-                sort_label="created_by__userprofile__last_name",
+table_name = 1
+column_type = 1
+sort_label = "created_by__userprofile__last_name"
             ),
             TableColumns(
                 name="Zip Code",
