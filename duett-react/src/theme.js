@@ -199,8 +199,8 @@ export default createTheme({
         width: 128,
         marginRight: defaultTheme.spacing(1),
         fontSize: 12,
-        position: 'relative',
-        transform: 'none',
+position: 'relative',
+transform: 'none',
       },
       shrink: {
         transform: 'none',
