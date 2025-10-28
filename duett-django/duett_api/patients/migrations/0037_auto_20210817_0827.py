@@ -13,9 +13,14 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='historicalpatientrequest',
             name='is_archived',
-            field=models.IntegerField(choices=[(0, 'Not_ARCHIVED'), (1, 'ARCHIVED')], default=0),
-        ),
-        migrations.AddField(
+field = models.IntegerField(
+        choices=[
+            (0, 'Not_ARCHIVED'),
+            (1, 'ARCHIVED')
+        ],
+        default=0
+    )
+migrations.AddField(
             model_name='patientrequest',
                 name='is_archived',
             field=models.IntegerField(choices=[(0, 'Not_ARCHIVED'), (1, 'ARCHIVED')], default=0),
