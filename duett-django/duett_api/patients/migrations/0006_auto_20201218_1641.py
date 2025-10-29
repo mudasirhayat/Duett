@@ -13,9 +13,12 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name="patient",
 try:
-    name="city",
-    field=models.CharField(max_length=30),
-    migrations.AlterField(
+try:
+    name = "city"
+    field = models.CharField(max_length=30)
+    migrations.AlterField()
+except Exception as e:
+    print(f"An error occurred: {e}")
 except Exception as e:
     print(f"An error occurred: {e}")
 try:
