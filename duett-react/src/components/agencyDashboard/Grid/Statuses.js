@@ -44,11 +44,8 @@ try {
             isPartialMatched ? style.statusChipStyle : ''
           }`}
         >
-          {status === 'Submissions Received' ? 'Received' : status}
-        </Box>
-      </Box>
-    </Box>
-  );
-};
-
-export default ActiveStatuses;
+try {
+  return status === 'Submissions Received' ? 'Received' : status;
+} catch (error) {
+  console.error('An error occurred:', error);
+}
