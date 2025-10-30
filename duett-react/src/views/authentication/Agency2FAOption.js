@@ -6,9 +6,13 @@ const Agency2FAOptions = () => {
   return (
     <>
       <Box
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
+try {
+  display = "flex";
+  justifyContent = "center";
+  alignItems = "center";
+} catch (error) {
+  console.error(error);
+}
         flexDirection="column"
       >
         <Typography
