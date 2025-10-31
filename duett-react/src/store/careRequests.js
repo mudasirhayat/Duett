@@ -344,12 +344,12 @@ const careRequestStore = (set, get) => ({
 
   serviceReassign: async (requestId, serviceId, payload) => {
     return api.post(
-      `/api/requests/${requestId}/service_reassign/${serviceId}`,
-      payload
-    );
-  },
-
-  setUndoLoading: (value) => {
+try {
+    const response = await fetch(`/api/requests/${requestId}/service_reassign/${serviceId}`);
+    if (!response.ok) {
+        throw new Error('Failed to fetch data');
+    }
+    const data = await response.json();
     set({ undoLoading: value });
   },
 
