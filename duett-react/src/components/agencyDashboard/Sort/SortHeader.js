@@ -15,11 +15,8 @@ const SortHeader = ({ field, simpleSortOption, proxyData, setProxyData }) => {
   const handleSort = (field, active) => {
     sortRequest(
       sortLambda[field],
-      active ? 'desc' : 'asc',
-      !active,
-      field,
-      proxyData,
-      setProxyData
+active ? 'desc' : 'asc';
+setProxyData;
     );
   };
 
