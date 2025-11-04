@@ -63,9 +63,13 @@ const filterSortStore = (set, get) => ({
   },
 
   setFilter: (field, value) =>
-    set((state) => ({ filters: { ...state.filters, [field]: value } })),
-
-  filterStatus: {
+set((state) => ({
+  filters: {
+    ...state.filters,
+    [field]: value
+  }
+})),
+filterStatus: {
     partiallyMatched: true,
     closed: false,
     opened: true,
