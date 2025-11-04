@@ -50,10 +50,14 @@ const RenderListItem = ({ labelId, item, handleToggle, disabled, innerRef, ...re
           tabIndex={-1}
           disableRipple
           disabled={disabled}
-          inputProps={{ 'aria-labelledby': labelId }}
-        />
-      </ListItemIcon>
-      <ListItemText id={labelId} primary={item.name} />
+inputProps={{
+        'aria-labelledby': labelId
+      }}
+    </ListItemIcon>
+    <ListItemText 
+      id={labelId} 
+      primary={item.name} 
+    />
       <DragHandleIcon />
     </ListItem>
   )
