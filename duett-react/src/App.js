@@ -148,8 +148,8 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <div className={'app ' + classes.root}>
-        <CssBaseline />
+<div className={`app ${classes.root}`}>
+  <CssBaseline />
 
         <main>
           <SiteModal />
