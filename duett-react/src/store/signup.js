@@ -34,10 +34,14 @@ const signupStore = (set) => ({
   },
 
   // Action to set document status
-  setDocumentStatus: (status) => set({ documentStatus: status }),
-
-  // Reset the entire signup state
-  resetSignupState: () =>
+setDocumentStatus: (status) => {
+    try {
+        set({ documentStatus: status });
+    } catch (error) {
+        console.error('Error setting document status:', error);
+    }
+  },
+  resetSignupState: () => {
     set({
       profileData: {},
       fundingSources: [],
