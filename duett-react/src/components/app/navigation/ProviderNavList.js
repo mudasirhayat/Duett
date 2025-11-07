@@ -28,9 +28,13 @@ const ProviderNavList = ({ ...linkProps }) => {
 
       <List>
         <ProfileLink />
-        <LogoutLink />
-        <ToggleDrawerLink />
-      </List>
+import React from 'react';
+
+const ProviderNavList = () => {
+  return (
+    <>
+      <LogoutLink />
+      <ToggleDrawerLink />
     </>
   );
 };
