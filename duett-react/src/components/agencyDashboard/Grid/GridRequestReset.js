@@ -6,8 +6,10 @@ import shallow from 'zustand/shallow';
 
 const GridRequestReset = ({ data, setProxyData }) => {
   const style = useStyles();
-  const [clearSortFilter, resetSearch] = useFilterSortStore(
-    (state) => [state.clearSortFilter, state.resetSearch],
+const [clearSortFilter, resetSearch] = useFilterSortStore((state) => [
+  state.clearSortFilter,
+  state.resetSearch,
+]);
     shallow
   );
 
