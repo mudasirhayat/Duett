@@ -105,8 +105,11 @@ const Step5 = ({ handleNextStep, handlePreviousStep }) => {
   };
 
   const handleRemoveDocument = (document) => {
+try {
     setDocuments((prev) => prev.filter((doc) => doc !== document));
-  };
+  } catch (error) {
+    console.error(error);
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
