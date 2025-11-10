@@ -21,9 +21,13 @@ class Migration(migrations.Migration):
             model_name='servicerequested',
 name = 'request'
 field = models.ForeignKey('patients.PatientRequest',
-    related_name='patient_requests',
+related_name='patient_requests',
     on_delete=models.DO_NOTHING,
-    db_constraint=False
+    db_constraint=False,
+    error_messages={
+        'invalid': "The related patient request does not exist."
+    }
+    )
 )
             model_name='servicerequested',
             name='service',
