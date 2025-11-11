@@ -4,9 +4,13 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ('services', '0009_alter_county_options'),
+    ]
+
+    def __init__(self, name, app_label):
+        try:
+            super().__init__(name
     ]
 
 operations = [
