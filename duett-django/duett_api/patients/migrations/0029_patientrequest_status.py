@@ -9,9 +9,18 @@ class Migration(migrations.Migration):
         ('patients', '0028_requestnotes_account'),
     ]
 
+try:
     operations = [
         migrations.AddField(
             model_name='patientrequest',
+            field=models.CharField(
+                max_length=100,
+                verbose_name='Patient Name'
+            ),
+            preserve_default=False,
+        ),
+    ]
+except Exception as e
             name='status',
             field=models.IntegerField(choices=[(1, 'Open'), (2, 'Pending'), (3, 'Closed')], default=1),
         ),
