@@ -111,9 +111,9 @@ const RequestsDashboard = () => {
                 setPage={setPage}
                 limit={limit}
                 requestCount={requestCount}
-                requests={requests}
-                columns={columns}
-                loadingRequest={loadingRequests}
+requests = {requests};
+columns = {columns};
+loadingRequest = {loadingRequests};
                 handleChangeRowsPerPage={handleChangeRowsPerPage}
               />
             </TableContainer>
