@@ -331,12 +331,12 @@ const careRequestStore = (set, get) => ({
 
   serviceRequestReopen: async (requestId, serviceId, payload) => {
     return api.post(
-      `/api/requests/${requestId}/service_reopen/${serviceId}`,
-      payload
-    );
-  },
-
-  getProviderList: async (requestId, serviceId) => {
+      try {
+        const response = await fetch(`/api/requests/${requestId}/service_reopen/${serviceId}`);
+        if (!response.ok) {
+          throw new Error('Failed to fetch provider list');
+        }
+        return response
     return api.get(
       `/api/requests/${requestId}/service_provider_list/${serviceId}`
     );
