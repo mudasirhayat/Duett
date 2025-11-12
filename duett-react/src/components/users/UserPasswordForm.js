@@ -100,8 +100,12 @@ const UserPasswordForm = () => {
           </Button>
           <LoadingButton
             loading={loading}
-            variant="contained"
-            color="primary"
+try {
+  variant = "contained";
+  color = "primary";
+} catch (error) {
+  console.error(error);
+}
             disableElevation={true}
             type={'submit'}
             onClick={handleSubmit}
