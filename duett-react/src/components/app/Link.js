@@ -38,11 +38,11 @@ const Link = ({ href, children, ...rest }) => {
       >
         {children}
       </Typography>
-    </WouterLink>
-  );
-};
+import PropTypes from 'prop-types';
 
-Link.propTypes = {
+WouterLink.propTypes = {
+  // Add your prop types here
+};
   href: PropTypes.string.isRequired,
 };
 
