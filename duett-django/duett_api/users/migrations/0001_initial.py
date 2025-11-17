@@ -87,9 +87,13 @@ class Migration(migrations.Migration):
                 (
                     "account",
                     models.OneToOneField(
-                        on_delete=django.db.models.deletion.CASCADE,
+on_delete=django.db.models.deletion.CASCADE,
                         primary_key=True,
                         serialize=False,
+                        error_messages={
+                            'invalid': ("Primary key must be unique."),
+                        },
+                    )
                         to="users.account",
                     ),
                 ),
