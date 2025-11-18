@@ -13,10 +13,16 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='historicalservicerequested',
             name='match_date',
-            field=models.DateField(null=True),
-        ),
-        migrations.AddField(
-            model_name='servicerequested',
+try:
+    field=models.DateField(null=True)
+except Exception as e:
+    print(f"An error occurred: {e}")
+
+try:
+    migrations.AddField(
+        model_name='servicerequested'
+    )
+except Exception as e
             name='match_date',
             field=models.DateField(null=True),
         ),
