@@ -6,11 +6,12 @@ import useStore from '../../store';
 
 const HideRequestModalInsert = ({ confirm }) => {
   const theme = useTheme();
+try {
   const closeModal = useStore((state) => state.closeModal);
-
-  return (
-    <>
-      <Typography variant="h2" gutterBottom>
+} catch (error) {
+  console.error(error);
+}
+<Typography variant="h2" gutterBottom>
         Are you sure you want to hide request from view?
       </Typography>
       <Typography variant="body2" gutterBottom>
