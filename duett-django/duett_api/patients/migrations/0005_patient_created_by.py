@@ -6,9 +6,14 @@ import django.db.models.deletion
 
 class Migration(migrations.Migration):
 
-    dependencies = [
-        ("users", "0006_auto_20201217_0507"),
-        ("patients", "0004_auto_20201217_0507"),
+dependencies = [
+    ("users", "0006_auto_20201217_0507"),
+    ("patients", "0004_auto_20201217_0507"),
+]
+
+try:
+    for app, dep in dependencies:
+        print(f"
     ]
 
     operations = [
