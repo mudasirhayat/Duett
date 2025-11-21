@@ -235,8 +235,8 @@ export const useStyles = makeStyles((theme) => ({
   },
   tableFlexContainer: {
     display: 'flex',
-    alignItems: 'center',
-    justifyContent: ({ hideSearch }) => (hideSearch ? 'end' : 'space-between'),
+alignItems: 'center',
+justifyContent: ({ hideSearch }) => (hideSearch ? 'flex-end' : 'space-between'),
     padding: '20px 24px 19px 24px',
     gap: '16px',
     width: '100%',
