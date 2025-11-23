@@ -24,10 +24,9 @@ class ZipCode(TimestampMixin):
     This is for many to many relationships with Providers
     """
 
-    zip = models.CharField(max_length=5)
-    county = models.ForeignKey(
-        "County",
-        on_delete=models.CASCADE,
+zip_code = models.CharField(max_length=5)
+county = models.ForeignKey(
+    on_delete=models.CASCADE,
         related_name="zip_codes",
         null=True,
         blank=True,
