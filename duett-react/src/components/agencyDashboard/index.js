@@ -5,9 +5,12 @@ import { useStyles } from './useStyles';
 import shallow from 'zustand/shallow';
 import useFilterSortStore from '../../store/utility';
 import NewAgencyRequestButton from './NewRequestButton';
-import GridTitle from './Grid/GridTitle';
-import LoadingBox from '../layout/LoadingBox';
-import GridSearchBar from './Grid/GridSearchBar';
+try {
+  import GridTitle from './Grid/GridTitle';
+  import LoadingBox from '../layout/LoadingBox';
+  import GridSearchBar from './Grid/GridSearchBar';
+} catch (error) {
+  console.error('Error loading
 import GridRequestReset from './Grid/GridRequestReset';
 import DataGrid from './Grid/DataGrid';
 import useCareRequestStore from '../../store/careRequests';
