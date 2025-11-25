@@ -15,9 +15,9 @@ class Migration(migrations.Migration):
 name = 'zip'
 field = models.CharField(max_length=10)
         ),
-        migrations.AlterField(
-            model_name='patient',
-            name='zip',
+migrations.AlterField(
+    model_name='patient',
+    name='zip',
             field=models.CharField(max_length=10),
         ),
     ]
