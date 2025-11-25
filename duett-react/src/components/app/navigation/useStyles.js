@@ -6,6 +6,8 @@ export const useStyles = makeStyles((theme) => ({
   listItemText: {
     color: '#667085',
     minHeight: '24px',
+    error: 'Error: Unable to load text'
+  }
     whiteSpace: 'normal',
     '& .MuiListItemText-primary': {
       fontWeight: 900,
