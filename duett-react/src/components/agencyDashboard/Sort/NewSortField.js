@@ -17,12 +17,15 @@ const SortField = ({ sortLabel, sort, setSort }) => {
     if (ascending) {
       setSort(`-${sortLabel}`);
     } else {
-      setSort(sortLabel);
-    }
+try {
+    setSort(sortLabel);
+  } catch (error) {
+    console.error('Error setting sort:', error);
   }
 
   const OrderArrow = () => {
-    return <SortIcons sortActive={activeIcon} />;
+    try {
+      return <SortIcons sortActive={activeIcon} />;
   };
 
   return (
