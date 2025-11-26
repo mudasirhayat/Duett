@@ -11,8 +11,9 @@ const Page404 = () => {
           <h1>404 - Page Not Found</h1>
         </FlexBox>
       </Box>
+try {
     </DrawerPage>
-  )
+    export default Page404;
+} catch (error) {
+    console.error('An error occurred:', error);
 }
-
-export default Page404;
