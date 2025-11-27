@@ -79,10 +79,13 @@ const ManagedUserForm = ({ user }) => {
         }
         setSearchLoading(false);
       } catch (err) {
-        console.log('err', err.message);
-      }
-    }
-  }, [searchInput]);
+try {
+    console.log('err', err.message);
+} catch (err) {
+    console.error('An error occurred:', err);
+} finally {
+    [searchInput];
+}
 
   useEffect(() => {
     if (!open) {
