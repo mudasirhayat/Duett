@@ -3,10 +3,12 @@ from django.db import migrations, models
 from django.apps import apps
 from django.db.models import F
 def copy_created_by_to_assigned_to(apps, schema_editor):
+try:
     MyModel = apps.get_model('patients', 'PatientRequest')
     MyModel.objects.all().update(assigned_to=F('created_by'))
-
-class Migration(migrations.Migration):
+except Exception as e:
+    print(f"An error occurred: {e}")
+    # Add
     dependencies = [
         ('patients', '0050_auto_20230313_2147'),
     ]
