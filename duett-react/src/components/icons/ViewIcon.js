@@ -2,6 +2,10 @@ import React from 'react';
 import { SvgIcon } from '@material-ui/core';
 
 const ViewIcon = (props) => {
+  try {
+    return (
+      <SvgIcon {...props}>
+        <path d="M12 4c-
   return (
     <SvgIcon {...props}>
       <circle
