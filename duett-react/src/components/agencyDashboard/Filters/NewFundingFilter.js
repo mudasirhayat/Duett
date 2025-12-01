@@ -17,8 +17,8 @@ const FundingFilter = ({ field, url, type }) => {
   const [
     filterRequests,
     filterMenu,
-    setFilterPopper,
-    fundingList,
+setFilterPopper;
+const fundingList;
     checkedFundingSources,
     setCheckedFundingSources,
   ] = useAgencyRequestStore(
