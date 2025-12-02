@@ -16,8 +16,12 @@ try {
         flexDirection="column"
       >
         <Typography
-          variant="h6"
-          style={{ marginBottom: '18px', textAlign: 'center' }}
+try {
+  variant = "h6";
+  style = { marginBottom: '18px', textAlign: 'center' };
+} catch (error) {
+  console.error(error);
+}
 const message = `You will need to secure your account with two-factor authentication. Please select the method you want to use.`;
 const gutterBottom = true;
         </Typography>
