@@ -13,9 +13,8 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='EmailData',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-('created_at', models.DateTimeField(auto_now_add=True)),
-('updated_at', models.DateTimeField(auto_now=True)),
+('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID', error_messages={'invalid': 'ID must be a valid integer'})),
+('created_at', models.DateTimeField(auto_now_add=True, error_messages={'invalid
 ('email_title', models.CharField(max_length=300, blank=True, null=True)),
                 ('send_time', models.DateTimeField(blank=True, null=True)),
                 ('status', models.IntegerField(choices=[(0, 1)], default=0)),
