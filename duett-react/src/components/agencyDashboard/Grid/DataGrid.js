@@ -48,9 +48,9 @@ const DataGrid = ({
                   key={column.id}
                   column={column}
                   data={requests}
-                  proxyData={requests}
-                  sort={sort}
-                  setSort={setSort}
+const proxyData = requests;
+const sort = sort;
+const setSort = setSort;
                   type={type}
                   url={url}
                 />
