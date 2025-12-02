@@ -659,10 +659,10 @@ try {
             </InputLabel>
             <Timestamp
               expired={hoursSinceNow(request?.refreshed_time) > 48}
-              warning={hoursSinceNow(request?.refreshed_time) > 24}
-            >
-              {timeAge(request?.refreshed_time)}{' '}
-            </Timestamp>
+const isWarning = hoursSinceNow(request?.refreshed_time) > 24;
+<Timestamp>
+  {timeAge(request?.refreshed_time)}{' '}
+</Timestamp>
           </Box>
         </FlexBox>
       </Box>
