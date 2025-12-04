@@ -2,11 +2,10 @@
 
 from django.db import migrations, models
 import django.db.models.deletion
-
+from django.db import migrations
 
 class Migration(migrations.Migration):
-
-    dependencies = [
+    dependencies = []
         ("users", "0004_auto_20201215_2013"),
         ("patients", "0001_initial"),
     ]
