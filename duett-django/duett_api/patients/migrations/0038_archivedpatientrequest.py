@@ -14,9 +14,8 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='ArchivedPatientRequest',
-            fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+class ArchivedPatientRequest(models.Model):
+    id = models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')
                 ('created_at', models.DateTimeField(auto_now_add=True)),
                 ('updated_at', models.DateTimeField(auto_now=True)),
                 ('reason', models.IntegerField(choices=[(1, 'Client deceased.'), (2, 'Client circumstances changed.'), (3, 'Client has moved to new agency.'), (4, 'Request fulfilled outside of Duett.'), (5, 'Other (tell us why).')], default=1)),
