@@ -15,8 +15,12 @@ try:
         model_name="userprofile",
     )
 except Exception as e:
+try:
     print(f"An error occurred: {e}")
-            name="phone",
-            field=models.CharField(blank=True, max_length=16, null=True),
+except Exception as e:
+    print(f"An error occurred: {e}")
+
+name="phone",
+field=models.CharField(blank=True, max_length=16, null=True),
         ),
     ]
