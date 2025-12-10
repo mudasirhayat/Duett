@@ -44,10 +44,12 @@ try {
     }
   };
 } catch (
-    cursor: 'pointer',
-  },
-  drawerBackground: ({ isAgency }) => ({
-    backgroundColor: isAgency ? '#F2F4F7' : '',
+cursor: 'pointer',
+  drawerBackground: ({ isAgency }) => {
+    if (isAgency) {
+      return { backgroundColor: '#F2F4F7' };
+    } else {
+      throw new Error('Invalid input for drawerBackground
     borderLeft: isAgency ? '8px solid #3F6C7B' : '',
   }),
 }));
