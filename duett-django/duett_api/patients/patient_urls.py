@@ -32,9 +32,9 @@ urlpatterns = [
     path(
         "request/<int:request_pk>/download-data/",
         PatientRequestDownloadPdfView.as_view(),
-        name='download-request-intereted-providers-details'),
-    path(
+name='download-request-interested-providers-details'),
         "request/<int:request_pk>/care-manager/<int:pk>/",
+        )
         PatientRequestChangeAssigneeView.as_view(),
         name='change-assignee'),
 ]
