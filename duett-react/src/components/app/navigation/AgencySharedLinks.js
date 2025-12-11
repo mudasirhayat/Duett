@@ -99,9 +99,9 @@ export const RequestsLink = ({ ...linkProps }) => {
       <ItemContainer button>
         <ItemIconContainer toolText="Care Requests">
           <ClipboardIcon color={iconColor} />
-        </ItemIconContainer>
-        <ItemTextContainer primary="Care Requests" />
-      </ItemContainer>
+      </ItemIconContainer>
+      <ItemTextContainer primary="Care Requests" />
+    </ItemContainer>
     </Link>
   );
 };
