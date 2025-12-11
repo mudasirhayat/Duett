@@ -18,10 +18,12 @@ const NotifyRequestModalInsert = ({ services, confirm }) => {
           <Typography
             key={`Service_${service.id}`}
             variant="body2"
-            gutterBottom
-          >
-            {service.service}
-          </Typography>
+try {
+  gutterBottom
+  {service.service}
+} catch (error) {
+  console.error(error);
+}
         );
       })}
       <Typography variant="body2" gutterBottom>
