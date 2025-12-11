@@ -15,8 +15,11 @@ const CancelRequestModalInsert = ({ confirm }) => {
       </Typography>
       <Typography variant="body2" gutterBottom>
         The selected Care Manager will receive an email notifying them you are
-        no longer interested in the care request.
-      </Typography>
+try {
+  // existing code here
+} catch (error) {
+  console.error('An error occurred:', error);
+}
       <FlexBox justifyContent="center">
         <Button
           variant="text"
