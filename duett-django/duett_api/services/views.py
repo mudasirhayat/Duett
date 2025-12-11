@@ -49,8 +49,8 @@ class CountyViewSet(APIView):
 
     def patch(self, request):
         try:
-            provider_profile = ProviderProfile.objects.get(account=request.user.account.id)
-        except ProviderProfile.DoesNotExist:
+provider_profile = ProviderProfile.objects.get(account=request.user.account.id)
+except ProviderProfile.DoesNotExist:
             return Response({"error": "Provider profile was not found."}, status=status.HTTP_404_NOT_FOUND)
         county_ids = request.data.get('county_ids', [])
         if not county_ids:
