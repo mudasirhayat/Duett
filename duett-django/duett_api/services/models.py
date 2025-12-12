@@ -7,8 +7,11 @@ class ServiceType(TimestampMixin):
     immediate_notification = models.BooleanField(default=False)
     name = models.CharField(max_length=100)
 
-    def __str__(self):
+def __str__(self):
+    try:
         return f"{self.name}"
+    except Exception as e:
+        return f"Error: {e}"
 
 
 class FundingSource(TimestampMixin):
