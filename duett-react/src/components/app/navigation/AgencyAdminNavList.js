@@ -1,6 +1,11 @@
 import React from 'react';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
+
+try {
+  // Your existing code here
+} catch (error) {
+  console.error('An error occurred
 import { makeStyles } from '@material-ui/core/styles';
 import {
   ClientRequestsLink,
