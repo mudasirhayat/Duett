@@ -2,8 +2,7 @@ import React from 'react';
 import { makeStyles, Typography } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import { Link as WouterLink } from 'wouter';
-
-if (!PropTypes) {
+if (typeof PropTypes === 'undefined') {
   throw new Error('PropTypes is not available');
 }
 
