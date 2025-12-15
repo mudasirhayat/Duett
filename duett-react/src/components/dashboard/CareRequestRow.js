@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import {
-  IconButton,
-  makeStyles,
+import { IconButton, makeStyles } from '@material-ui/core';
   TableCell,
   TableRow,
   Typography,
