@@ -39,6 +39,7 @@ const CareRequestColumn = ({ column: { name, sort_label }, sort, setSort }) => {
 CareRequestColumn.propTypes = {
   column: PropTypes.object.isRequired,
   sort: PropTypes.string.isRequired,
+};
   setSort: PropTypes.func.isRequired,
 };
 
