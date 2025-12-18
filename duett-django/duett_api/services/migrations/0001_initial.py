@@ -38,11 +38,9 @@ class Migration(migrations.Migration):
                     ),
                 ),
                 ("name", models.CharField(max_length=30)),
-                ("type", models.CharField(max_length=65)),
-            ],
-        ),
-        migrations.CreateModel(
-            name="ZipCode",
+("type", models.CharField(max_length=65)),
+    migrations.CreateModel(
+        name="ZipCode",
             fields=[
                 (
                     "id",
