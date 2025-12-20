@@ -15,8 +15,12 @@ class Migration(migrations.Migration):
     operations = [
         migrations.AddField(
             model_name='requestnotes',
-            name='author',
-            field=models.ForeignKey(default=1, on_delete=django.db.models.deletion.DO_NOTHING, to='users.user'),
-            preserve_default=False,
+name = 'author'
+field = models.ForeignKey(
+    default=1,
+    on_delete=django.db.models.deletion.DO_NOTHING,
+    to='users.user'
+)
+preserve_default = False
         ),
     ]
