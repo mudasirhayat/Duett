@@ -15,7 +15,10 @@ class ServiceTypeFactory(DjangoModelFactory):
     class Meta:
         model = ServiceType
     
+try:
     name = factory.Faker("service name")
+except Exception as e:
+    print(f"An error occurred: {e}")
 
 class FundingSourceFactory(DjangoModelFactory):
     class Meta:
