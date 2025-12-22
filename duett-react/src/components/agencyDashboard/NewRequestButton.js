@@ -19,9 +19,13 @@ const NewAgencyRequestButton = () => {
         <RoleMatch role={accountTypes.AGENCY}>
           <Button
             variant="contained"
-            color="primary"
-            disableElevation={true}
-            className={style.addButton}
+try {
+  color = "primary";
+  disableElevation = true;
+  className = style.addButton;
+} catch (error) {
+  console.error("An error occurred:", error);
+}
             onClick={() => {
               setLocation('/request/new');
             }}
