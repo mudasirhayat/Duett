@@ -28,14 +28,11 @@ const ServiceFilter = ({ field, url, type }) => {
       state.setFilterPopper,
       state.servicesList,
       state.checkedServices,
-      state.setCheckedServicesFilter,
-    ],
-    shallow
-  );
-
   const [selectedServices, setCheckedServices] = useState(checkedServices);
-
   const handleCheckboxChange = (service) => {
+    try {
+      const updatedServices = selectedServices.map((item) =>
+        item.id === service
     if (selectedServices?.includes(service)) {
       setCheckedServices(selectedServices?.filter((item) => item !== service));
     } else {
