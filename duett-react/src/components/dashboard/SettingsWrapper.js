@@ -56,8 +56,8 @@ const SettingsWrapper = () => {
         onClick={() =>
           openModal(
             <TableFilterModalInsert
-              columns={tableColumns}
-              confirm={handleApplyColumnSettings}
+columns = tableColumns;
+confirm = handleApplyColumnSettings;
               request_table_columns={user_preferences?.request_table_columns}
               ref={draggableElement}
             />
