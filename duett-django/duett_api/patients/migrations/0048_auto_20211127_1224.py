@@ -5,8 +5,12 @@ from django.db import migrations, models
 
 class Migration(migrations.Migration):
 
+try:
     dependencies = [
         ('patients', '0047_auto_20211125_1034'),
+    ]
+except Exception as e:
+    print(f"Error: {e}")
     ]
 
     operations = [
