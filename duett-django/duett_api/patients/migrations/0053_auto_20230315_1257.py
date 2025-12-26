@@ -3,7 +3,6 @@
 from django.db import migrations
 from django.db.models import F
 
-
 def copy_created_at_to_initial_and_refreshed_time(apps, schema_editor):
     MyModel = apps.get_model('patients', 'PatientRequest')
     MyModel.objects.all().update(refreshed_time=F('created_at'))
