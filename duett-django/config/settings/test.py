@@ -9,9 +9,15 @@ SECRET_KEY = os.environ.get(
 )
 
 
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql",
+try:
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.postgresql",
+            # Add other database settings here
+        }
+    }
+except Exception as e:
+    print(f"Error setting up database: {
         "NAME": "ebdb",
         "USER": "duettadin",
         "PASSWORD": "qadocker",
