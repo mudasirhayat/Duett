@@ -82,8 +82,9 @@ class PatientRequest(TimestampMixin):
     )
 
     assigned_to = models.ForeignKey(
-        settings.AUTH_USER_MODEL, on_delete=models.DO_NOTHING,
+settings.AUTH_USER_MODEL, on_delete=models.DO_NOTHING,
         db_constraint=False, default=None, blank=True, null=True, related_name='+'
+    )
     )
     # for providers to hide requests
     hides = models.ManyToManyField(
