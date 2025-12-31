@@ -51,6 +51,7 @@ const useStyles = makeStyles((theme) => ({
 
 const QR2FAWizardDesktop = ({ open, setWizard }) => {
   const classes = useStyles();
+};
   const [activeStep, setActiveStep] = useState(0);
 
   const handleNext = () => {
