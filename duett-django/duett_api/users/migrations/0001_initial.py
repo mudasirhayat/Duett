@@ -47,8 +47,8 @@ class Migration(migrations.Migration):
                     ),
                 ),
                 ("is_staff", models.BooleanField()),
-                ("is_active", models.BooleanField()),
-                ("last_login", models.DateTimeField(blank=True, null=True)),
+("is_active", models.BooleanField(default=False)),
+                ("last_login", models.DateTimeField(blank=True, null=True, auto_now=False, auto_now_add=False)),
             ],
             options={
                 "abstract": False,
