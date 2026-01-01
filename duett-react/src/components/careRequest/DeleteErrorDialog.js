@@ -7,6 +7,11 @@ import IconButton from '@material-ui/core/IconButton';
 import { Button, makeStyles, Typography, useTheme } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
+  // Your existing code for makeStyles function
+
+}));
+
+if (!IconButton ||
   title: {
     marginBottom: 50,
     textAlign: 'center',
