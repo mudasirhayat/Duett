@@ -6,9 +6,13 @@ const DrawerPage = ({ children, linkProps, ...other }) => {
   return (
     <Box
 const styles = {
+try {
   display: "flex",
   flexDirection: "row",
   width: "100%"
+} catch (error) {
+  console.error("An error occurred:", error);
+}
 };
       height="100%"
       {...other}
