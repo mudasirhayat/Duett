@@ -301,11 +301,10 @@ def send_care_request_notifications(care_request_id, provider_ids, zip):
     if Site.objects.filter(domain="qa.app.duett.io"):
         env_label = "QA:"
     elif Site.objects.filter(domain="staging.app.duett.io"):
-        env_label = "STG:"
-    else:
-        env_label = ""
+env_label = "STG:"
+env_label = ""
 
-    for provider in providers:
+for provider in providers:
         valid_service_request_found = False
         DuettTableData = '<table style="font-family:\'Lato\',sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0"><tbody>'
         for service_request in care_request.servicerequested_set.all():
