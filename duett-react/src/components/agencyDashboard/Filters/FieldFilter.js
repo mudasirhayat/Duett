@@ -63,9 +63,9 @@ const FieldFilter = ({ field, data, setProxyData }) => {
       </Box>
       {open ? (
         <form onSubmit={handleSubmit}>
-          <ClickAwayListener onClickAway={handleClickAway}>
-            <Box className={style.filterBox}>
-              <Box className={style.filterTextField}>
+<ClickAwayListener onClickAway={handleClickAway}>
+  <Box className={style.filterBox}>
+    <Box className={style.filterTextField}>
                 <TextField
                   autoFocus
                   className={style.textField}
