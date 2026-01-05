@@ -122,11 +122,8 @@ const TwoFactorAuthQR = ({ base32, auth_url, user_id }) => {
             >
               <span style={{ fontWeight: 'bolder' }}> SecretKey: </span>{' '}
               {base32}
-            </Typography>
-          </Box>
-        </Box>
-        <Box
-          display="flex"
+</Typography>
+display="flex";
           flexDirection="column"
           alignItems="center"
           width={300}
