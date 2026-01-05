@@ -66,9 +66,12 @@ try {
       setServices(savedServices);
     }
     if (savedCounties) {
-      setCounties(savedCounties);
-    }
-    if (savedDocuments) {
+try {
+  setCounties(savedCounties);
+  if (savedDocuments) {
+} catch (error) {
+  console.error('An error occurred:', error);
+}
       setDocuments(savedDocuments);
     }
 
