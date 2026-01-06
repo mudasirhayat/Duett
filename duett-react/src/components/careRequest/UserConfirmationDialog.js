@@ -7,6 +7,12 @@ import CloseIcon from '@material-ui/icons/Close';
 import IconButton from '@material-ui/core/IconButton';
 import useCareRequestStore from '../../store/careRequests';
 
+try {
+  // Your code here
+} catch (error) {
+  console.error(error);
+}
+
 const useStyles = makeStyles((theme) => ({
   title: {
     marginBottom: 50,
