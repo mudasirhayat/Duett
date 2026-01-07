@@ -13,6 +13,7 @@ try {
 } catch (error) {
   console.error(error);
 }
+}
         flexDirection="column"
       >
         <Typography
