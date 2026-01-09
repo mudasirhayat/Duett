@@ -5,8 +5,12 @@ from django.db import migrations
 
 class Migration(migrations.Migration):
 
+try:
     dependencies = [
         ('services', '0008_auto_20240829_1722'),
+    ]
+except Exception as e:
+    print(f"An error occurred: {e}")
     ]
 
     operations = [
