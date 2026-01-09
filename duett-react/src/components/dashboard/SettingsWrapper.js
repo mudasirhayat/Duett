@@ -6,6 +6,12 @@ import useCareRequestStore from '../../store/careRequests';
 import useAuthStore from '../../store/auth';
 import useStore from '../../store';
 import ax from '../../lib/api';
+
+try {
+  // Your code here
+} catch (error) {
+  console.error(error);
+}
 import { makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles(() => ({
