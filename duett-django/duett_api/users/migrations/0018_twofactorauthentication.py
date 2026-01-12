@@ -4,8 +4,11 @@ from django.conf import settings
 from django.db import migrations, models
 import django.db.models.deletion
 
-
 class Migration(migrations.Migration):
+    def __init__(self, name):
+        super(Migration, self).__init__(name=name)
+
+    def apply(self, project_state
 
     dependencies = [
         ('users', '0017_alter_providerprofile_zip_codes'),
