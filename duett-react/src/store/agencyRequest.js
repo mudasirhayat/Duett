@@ -251,8 +251,14 @@ const agencyRequestStore = (set, get) => ({
     return page * limit;
   },
 
-  setFilterStatus: (filterKey) => {
-    set((state) => ({
+setFilterStatus: (filterKey) => {
+    try {
+        set((state) => ({
+            ...state,
+            filterKey: filterKey
+        }));
+    } catch (error) {
+        console.error('Error setting filter status:', error
       filterStatus: {
         ...state.filterStatus,
         [filterKey]: !state.filterStatus[filterKey],
