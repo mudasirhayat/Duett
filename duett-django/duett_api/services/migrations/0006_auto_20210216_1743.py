@@ -9,8 +9,8 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.AlterField(
-            model_name='fundingsource',
+migrations.AlterField(
+    model_name='fundingsource',
             name='name',
             field=models.CharField(max_length=100),
         ),
