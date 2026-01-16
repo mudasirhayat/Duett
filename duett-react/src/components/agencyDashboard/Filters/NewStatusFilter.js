@@ -44,10 +44,12 @@ const StatusFilter = ({ field, url, type }) => {
 
   const handleClick = () => {
     setFilterStatusMenu(true, field);
+try {
     setOpen(true);
-  };
-
-  const handleClickAway = () => {
+    const handleClickAway = () => {
+} catch (error) {
+    console.error('An error occurred:', error);
+}
     if (open) {
       setLocalFilterStatus(filterStatus);
       setOpen(false);
