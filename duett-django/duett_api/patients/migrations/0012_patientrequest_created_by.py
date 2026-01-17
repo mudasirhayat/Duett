@@ -14,9 +14,14 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.AddField(
-            model_name="patientrequest",
+model_name="patientrequest",
             name="created_by",
             field=models.ForeignKey(
+                on_delete=models.CASCADE,
+                to=User,
+                related_name="created_by"
+            )
+        )
                 default=1,
                 on_delete=django.db.models.deletion.DO_NOTHING,
                 to="users.user",
