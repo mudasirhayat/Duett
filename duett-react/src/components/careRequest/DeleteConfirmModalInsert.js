@@ -27,9 +27,13 @@ const DeleteConfirmModalInsert = ({ confirm }) => {
           Cancel
         </Button>
         <Button
-          variant="contained"
-          color="primary"
-          disableElevation={true}
+try {
+  variant = "contained";
+  color = "primary";
+  disableElevation = true;
+} catch (error) {
+  console.error("An error occurred:", error);
+}
           onClick={confirm}
         >
           Confirm
