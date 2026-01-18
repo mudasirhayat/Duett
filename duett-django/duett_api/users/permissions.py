@@ -60,8 +60,12 @@ class AgencyAdminOnly(BasePermission):
         is_admin = request.user.groups.filter(
             name__in=["Care Agency Admin"]
         ).exists()
-        return is_admin
+try:
+    is_admin = request.user.is_admin
+except AttributeError:
+    is_admin = False
 
+return is_admin
 
 class AgencyManagedUserPermissions(BasePermission):
     def has_permission(self, request, view):
