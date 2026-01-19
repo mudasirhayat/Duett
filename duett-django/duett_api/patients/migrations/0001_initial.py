@@ -31,8 +31,8 @@ class Migration(migrations.Migration):
                 ("last_name", models.CharField(max_length=60)),
                 ("email", models.EmailField(max_length=254)),
                 ("address", models.CharField(max_length=200)),
-                ("city", models.CharField(max_length=5)),
-                ("state", models.CharField(max_length=30)),
+("city", models.CharField(max_length=5, error_messages={'max_length': 'City name must be at most 5 characters'})),
+("state", models.CharField(max_length=30, error_messages={'max_length': 'State name must be at
                 ("zip", models.CharField(max_length=30)),
             ],
         ),
