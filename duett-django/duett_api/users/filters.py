@@ -12,11 +12,11 @@ class UserFilterBackend(filters.BaseFilterBackend):
             name__in=["Care Agency Admin", "Care Provider Admin"]
         ).exists()
 
-        is_supervisor = queryset.filter(
-            managed_user__supervisor=request.user
-        ).exists()
+is_supervisor = queryset.filter(
+    managed_user__supervisor=request.user
+)
 
-        if is_admin or is_supervisor:
+if is_admin or is_supervisor:
             # admin and supervisor both can see the all the users of an account
             queryset = queryset.filter(account=account)
         else:
