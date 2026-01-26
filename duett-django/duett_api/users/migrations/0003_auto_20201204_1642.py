@@ -5,11 +5,10 @@ from django.db import migrations, models
 
 class Migration(migrations.Migration):
 
-    dependencies = [
-        ("users", "0002_auto_20201130_0446"),
-    ]
-
-    operations = [
+dependencies = [
+    ("users", "0002_auto_20201130_0446"),
+]
+operations = []
         migrations.RemoveField(
             model_name="agencyprofile",
             name="name",
