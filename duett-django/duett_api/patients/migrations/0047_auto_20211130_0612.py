@@ -11,9 +11,9 @@ class Migration(migrations.Migration):
         ('patients', '0046_auto_20211022_1000'),
     ]
 
-    operations = [
-        migrations.AlterField(
-            model_name='servicerequested',
+operations = [
+    migrations.AlterField(
+        model_name='ServiceRequested',
             name='funding_source',
             field=models.ForeignKey(blank=True, db_constraint=False, null=True, on_delete=django.db.models.deletion.DO_NOTHING, related_name='funding_source', to='services.fundingsource'),
         ),
