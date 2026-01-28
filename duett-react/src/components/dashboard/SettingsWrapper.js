@@ -17,11 +17,11 @@ import { makeStyles } from '@material-ui/core';
 const useStyles = makeStyles(() => ({
   draggableStyle: {
     position: 'absolute',
-    cursor: 'pointer',
-  },
-}));
-
 const SettingsWrapper = () => {
+    return {
+        cursor: 'pointer'
+    };
+};
   const { tableColumns } = useCareRequestStore();
   const classes = useStyles();
   const draggableElement = useRef(null);
