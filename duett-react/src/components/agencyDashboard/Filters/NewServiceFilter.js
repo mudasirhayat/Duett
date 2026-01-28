@@ -45,11 +45,10 @@ const ServiceFilter = ({ field, url, type }) => {
   };
 
   const handleClickAway = () => {
-    setCheckedServices(checkedServices);
-    setFilterPopper(false, '');
-  };
+setCheckedServices(checkedServices);
+setFilterPopper(false, '');
 
-  const handleFilter = () => {
+const handleFilter = () => {
     setFilterPopper(false, '');
     setCheckedServicesFilter(selectedServices);
     filterRequests(url, type);
