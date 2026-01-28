@@ -21,9 +21,9 @@ options = {
 migrations.AlterField(
             model_name="userpreferences",
             name="request_table_columns",
-            field=models.CharField(blank=True, max_length=255, null=True),
-        ),
-        migrations.AlterField(
+field = models.CharField(max_length=255, blank=True, null=True)
+
+migrations.AlterField(
             model_name="userpreferences",
             name="user",
             field=models.OneToOneField(
