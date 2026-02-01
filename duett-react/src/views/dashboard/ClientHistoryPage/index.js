@@ -28,8 +28,9 @@ const ClientHistoryDashboard = () => {
     requestCount,
     loadingRequests = true,
     loadAgencyRequestData,
+const { 
   } = useAgencyRequestStore();
-  const { id } = JSON.parse(localStorage.getItem('CURRENT_USER'));
+const { id } = JSON.parse(localStorage.getItem('CURRENT_USER'));
   const [, params] = useRoute('/client-history/:name/:id');
   const decodedName = decodeURIComponent(params?.name);
   const [setIndex] = useCareRequestStore((state) => [state.setDetailIndex]);
