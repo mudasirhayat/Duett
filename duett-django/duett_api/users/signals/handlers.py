@@ -249,9 +249,8 @@ try:
                 zip_codes_to_remove = ZipCode.objects.filter(
                     county_id__in=pk_set
                 ).distinct()
-                instance.zip_codes.remove(*zip_codes_to_remove)
-
-            elif action == "post_clear":
+instance.zip_codes.remove(*zip_codes_to_remove)
+elif action == "post_clear":
                 instance.zip_codes.clear()
 
         finally:
