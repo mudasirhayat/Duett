@@ -1,7 +1,13 @@
 const Auth = {
   _accessKey: 'ACCESS_TOKEN',
-  _refreshKey: 'REFRESH_TOKEN',
+_refreshKey: 'REFRESH_TOKEN',
   _currentUserKey: 'CURRENT_USER',
+  
+  try {
+    // Code that may throw an error
+  } catch (error) {
+    console.error('An error occurred:', error);
+  }
 
   get accessToken() {
     return localStorage.getItem(Auth._accessKey);
