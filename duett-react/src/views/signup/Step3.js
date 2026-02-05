@@ -17,8 +17,8 @@ const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: theme.palette.primary.main,
     width: '100vw',
-    height: '100vh',
-    display: 'flex',
+height: '100vh',
+display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
   },
