@@ -48,5 +48,8 @@ def upload_to_s3(file, file_name):
         return False
     except Exception as e:
         print(f"An error occurred: {e}")
-        return False
+try:
     return f"https://{settings.AWS_S3_CUSTOM_DOMAIN}/{file_name}"
+except Exception as e:
+    print(f"An error occurred: {e}")
+    return False
