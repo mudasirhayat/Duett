@@ -5,8 +5,13 @@ import GridTitle from '../../../components/agencyDashboard/Grid/GridTitle';
 import useAgencyRequestStore from '../../../store/agencyRequest';
 import LoadingBox from '../../../components/layout/LoadingBox';
 import DrawerPage from '../../../components/app/DrawerPage';
-import { Box, TableContainer } from '@material-ui/core';
-import { useStyles } from '../useStyles';
+import {
+  Box,
+  TableContainer,
+} from '@material-ui/core';
+import {
+  useStyles,
+} from '../useStyles';
 import NewGridReset from '../../../components/agencyDashboard/Grid/NewGridReset';
 import GridSearch from '../../../components/agencyDashboard/Grid/NewGridSearch';
 import { useLocation } from 'wouter';
