@@ -46,11 +46,12 @@ class Command(BaseCommand):
                     )
                     message = EmailMessage(
                         f"{env_label} Request Update: Closed",
-                        html_message,
-                        settings.DEFAULT_FROM_EMAIL,
-                        [email],
-                    )
-                    message.content_subtype = "html"
+try:
+    html_message,
+    settings.DEFAULT_FROM_EMAIL,
+    message.content_subtype = "html"
+except Exception as e:
+    print(f"An error occurred: {e}")
                     message.send()
                     rec.status = 1
                     rec.save()
