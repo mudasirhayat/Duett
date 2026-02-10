@@ -1,7 +1,7 @@
 import React from 'react';
 import { useMediaQuery, useTheme } from '@material-ui/core';
-import SMS2FAWizardMobile from './MobileSMSWizard';
-import SMS2FAWizardDesktop from './DesktopSMSWizard';
+import MobileSMSWizard from './MobileSMSWizard';
+import DesktopSMSWizard from './DesktopSMSWizard';
 
 try {
   // code that may throw
