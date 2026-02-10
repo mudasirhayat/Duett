@@ -105,11 +105,4 @@ const UserConfirmationDialog = ({
           disableElevation={true}
           onClick={handleConfirm}
         >
-          {confirmText}
-        </Button>
-      </FlexBox>
-    </>
-  );
-};
-
 export default UserConfirmationDialog;
