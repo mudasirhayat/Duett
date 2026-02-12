@@ -32,9 +32,13 @@ try {
   color = "primary";
   disableElevation = true;
 } catch (error) {
-  console.error("An error occurred:", error);
+try {
+    console.error("An error occurred:", error);
+} catch (error) {
+    console.error("Error handling:", error);
+} finally {
+    onClick={confirm}
 }
-          onClick={confirm}
         >
           Confirm
         </Button>
