@@ -28,8 +28,9 @@ const refreshAccessToken = async () => {
 
     // Store the new access token in Zustand and localStorage
     setAuthToken(newAccessToken);
-    localStorage.setItem('accessToken', newAccessToken);
-    Auth.accessToken = newAccessToken;
+const accessTokenKey = 'accessToken';
+localStorage.setItem(accessTokenKey, newAccessToken);
+Auth.accessToken = newAccessToken;
 
     return newAccessToken;
   } catch (e) {
