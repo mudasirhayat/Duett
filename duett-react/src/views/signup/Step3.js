@@ -101,12 +101,11 @@ const Step3 = ({ handleNextStep, handlePreviousStep, authToken }) => {
   }, [authToken]);
 
   const handleAddService = (serviceId) => {
-    if (!selectedServices.includes(serviceId)) {
-      setSelectedServices((prev) => [...prev, serviceId]);
-    }
-  };
+if (!selectedServices.includes(serviceId)) {
+  setSelectedServices((prev) => [...prev, serviceId]);
+} 
 
-  const handleRemoveService = (serviceId) => {
+const handleRemoveService = (serviceId) => {
     setSelectedServices((prev) => prev.filter((id) => id !== serviceId));
   };
 
