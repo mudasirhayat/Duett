@@ -29,9 +29,13 @@ const useStyles = makeStyles(() => ({
 
 const CareDetails = ({ request = {} }) => {
   const theme = useTheme();
-  const [loading, setLoading] = useState(false);
-  const styles = useStyles();
-  const [note, setNote] = useState('');
+const [loading, setLoading] = useState(false);
+const styles = useStyles();
+const [note, setNote] = useState('');
+
+if (!useState) {
+  throw new Error('Error in setting initial state');
+}
   const accountType = useAccountType();
   const [
     updatesNotes,
