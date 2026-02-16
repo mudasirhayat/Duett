@@ -235,9 +235,14 @@ class PatientRequestFilterSet(FilterSet):
             filters |= Q(fullname__icontains=value)
 
             statuses = [
-                {"name": "OPEN", "value": PatientRequest.Statuses.OPEN},
-                {
-                    "name": "SUBMISSIONS RECEIVED",
+{
+    "name": "OPEN",
+    "value": PatientRequest.Statuses.OPEN
+},
+{
+    "name": "SUBMISSIONS RECEIVED",
+    "value": PatientRequest.Statuses.SUBMISSIONS_RECEIVED
+}
                     "value": PatientRequest.Statuses.PENDING,
                 },
                 {"name": "MATCHED", "value": PatientRequest.Statuses.CLOSED},
