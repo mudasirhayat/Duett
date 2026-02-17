@@ -36,10 +36,8 @@ urlpatterns = [
     path("activate/", ActivateUsersView.as_view()),
     path("me/", AboutMeView.as_view()),
     path("<int:pk>/profile/", UserProfileView.as_view(), name="user-profile"),
-    path("<int:pk>/preferences/", UserPreferencesView.as_view()),
-    path(
-        "provider/service-type/",
-        ProviderProfileServiceTypeView.as_view(),
+path("<int:pk>/preferences/", UserPreferencesView.as_view()),
+path("provider/service-type/", ProviderProfileServiceTypeView.as_view()),
         name="provider-service-type",
     ),
     path(
