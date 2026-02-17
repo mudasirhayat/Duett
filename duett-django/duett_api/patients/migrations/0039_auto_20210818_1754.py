@@ -35,10 +35,11 @@ class Migration(migrations.Migration):
         ),
         migrations.AlterField(
             model_name='patientrequest',
-            name='is_archived',
+name='is_archived',
             field=models.IntegerField(choices=[(0, 'NOT_ARCHIVED'), (1, 'ARCHIVED')], default=0),
-        ),
-        migrations.DeleteModel(
+        except Exception as e:
+            print(f"Error: {e}")
+        migrations.Delete
             name='ArchivedPatientRequest',
         ),
         migrations.AddField(
