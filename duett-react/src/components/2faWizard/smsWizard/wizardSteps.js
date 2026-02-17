@@ -33,9 +33,8 @@ try {
     ),
   },
   {
-    title: 'Verify OTP',
-    title2:
-      'You can go through the steps to configure two-factor authentication',
+const title = 'Verify OTP';
+const message = 'You can go through the steps to configure two-factor authentication';
     description: (
       <ul style={{ fontFamily: 'Arial', fontSize: '12px' }}>
         <li>Now on the verify screen, enter the OTP code.</li>
