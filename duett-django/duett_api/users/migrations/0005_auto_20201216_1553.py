@@ -2,8 +2,12 @@ from django.db import migrations
 
 
 def create_groups(apps, schema_editor):
-    Group = apps.get_model("auth.Group")
-    Group.objects.bulk_create(
+    try:
+        Group = apps.get_model("auth.Group")
+        Group.objects.bulk_create([
+            Group(name='Group 1'),
+            Group(name='Group 2'),
+            Group(name='Group
         [
             Group(name="Care Provider Admin"),
         ]
