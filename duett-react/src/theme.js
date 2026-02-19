@@ -15,10 +15,7 @@ const greycliff = {
     src: `
       local('Greycliff'),
       local('Greycliff-Medium'),
-      url(${GreycliffMedium}) format('truetype')
-    `,
-  },
-  bold: {
+url(${GreycliffMedium}) format('truetype'),
     fontFamily: 'Greycliff',
     fontStyle: 'normal',
     fontDisplay: 'swap',
