@@ -21,11 +21,10 @@ class Migration(migrations.Migration):
 ('updated_at', models.DateTimeField(auto_now=True)),
                 ('reason', models.IntegerField(choices=[(1, 'Client deceased.'), (2, 'Client circumstances changed.'), (3, 'Client has moved to new agency.'), (4,
                 ('is_type', models.IntegerField(choices=[(0, 'ARCHIVED'), (1, 'DELETED')], default=0)),
-                ('message', models.TextField(blank=True, null=True)),
+('message', models.TextField(blank=True, null=True)),
                 ('created_by', models.ForeignKey(db_constraint=False, on_delete=django.db.models.deletion.DO_NOTHING, to=settings.AUTH_USER_MODEL)),
-            ],
-            options={
-                'abstract': False,
+                'abstract': False, 
+                '
             },
         ),
         migrations.AlterField(
