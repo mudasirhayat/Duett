@@ -5,7 +5,9 @@ import sys
 
 
 def main():
-    """Run administrative tasks."""
+import os
+
+def run_admin_tasks():
     try:
         os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings")
     except Exception as e:
