@@ -9,8 +9,9 @@ try:
 except Exception as e:
     print(f"An error occurred: {e}")
     # Add
-    dependencies = [
-        ('patients', '0050_auto_20230313_2147'),
+dependencies = [
+    ('patients', '0050_auto_20230313_2147'),
+]
     ]
 
     operations = [migrations.RunPython(code=copy_created_by_to_assigned_to),]
