@@ -28,10 +28,9 @@ class Command(BaseCommand):
                 count1 = 0
                 s_request = fun_d.funding_source.all() #service_requests
                 for req in s_request:
-                    fund = req.funding_source
-                    try: 
-                        req.request
-                        count1 = count1+1
+fund = req.funding_source
+req.request
+count1 += 1
                     except:
                         pass
                 print(fund,"         |     ",count1)
