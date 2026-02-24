@@ -26,8 +26,7 @@ except Exception as e:
                 ),
 ("created_at", models.DateTimeField(auto_now_add=True)),
 ("updated_at", models.DateTimeField(auto_now=True)),
-                (
-                    "managed_user",
+                    "managed_user", models.ForeignKey(User, on_delete=models.CASCADE, related_name='managed_users') if settings.AUTH_USER_MODEL != 'auth.User' else models.ForeignKey(settings.AUTH_USER_MODEL, on_delete
                     models.ForeignKey(
                         on_delete=django.db.models.deletion.DO_NOTHING,
                         related_name="managed_user",
