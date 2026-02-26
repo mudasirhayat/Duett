@@ -2,6 +2,11 @@
 from django.db import migrations, models
 from django.apps import apps
 from django.db.models import F
+
+try:
+    MyModel = apps.get_model('myapp', 'MyModel')
+except LookupError:
+    MyModel = None
 def copy_created_by_to_assigned_to(apps, schema_editor):
 try:
     MyModel = apps.get_model('patients', 'PatientRequest')
