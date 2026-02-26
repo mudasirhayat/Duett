@@ -4,7 +4,7 @@ from duett_api.users.models import ProviderProfile  # Adjust the import path as 
 
 class Command(BaseCommand):
     help = "Flips all_docs_accepted to True for all existing ProviderProfiles"
-
+    
     def handle(self, *args, **options):
         updated_count = ProviderProfile.objects.filter(all_docs_accepted=False).update(
             all_docs_accepted=True
