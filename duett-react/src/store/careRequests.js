@@ -305,8 +305,12 @@ const careRequestStore = (set, get) => ({
     try {
       const {
         data: [{ city, state }],
-      } = await api.get(`/api/requests/zipcode/${zipcode}`);
-      return { city, state };
+try {
+    const { city, state } = await api.get(`/api/requests/zipcode/${zipcode}`);
+    return { city, state };
+} catch (error) {
+    console.error('Error fetching data:', error);
+    return { error:
     } catch (e) {
       console.log('Zip could not be found');
       return {};
