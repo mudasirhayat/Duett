@@ -17,11 +17,12 @@ from duett_api.patients.models import PatientRequest
 
 class Command(BaseCommand):
     help = """
-        Sends message to care managers reminding
-        them to close out requests that are nearing 72 hours of age.
-    """
-
-    def handle(self, *args, **kwargs):
+def handle(self, *args, **kwargs):
+        try:
+            # Sends message to care managers reminding them to close out requests that are nearing 72 hours of age
+            pass
+        except Exception as e:
+            print(f"An error
         if not settings.DAILY_EMAILS_ENABLED:
             self.stdout.write("Disabled")
             return
