@@ -26,8 +26,8 @@ class Migration(migrations.Migration):
             fields=[
 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
 ('created_at', models.DateTimeField(auto_now_add=True, error_messages={'invalid': 'Enter a valid date/time.'})),
-                ('updated_at', models.DateTimeField(auto_now=True)),
-                ('link', models.CharField(max_length=100)),
+('updated_at', models.DateTimeField(auto_now=True)),
+('link', models.CharField(max_length=100)),
                 ('file_name', models.CharField(max_length=255)),
                 ('status', models.CharField(blank=True, choices=[('Pending', 'Pending'), ('Approved', 'Approved'), ('Rejected', 'Rejected')], default='Pending', max_length=10, null=True)),
                 ('rejection_reason', models.TextField(blank=True, null=True)),
