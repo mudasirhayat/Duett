@@ -18,6 +18,10 @@ import { useLocation } from 'wouter';
 import useCareRequestStore from '../../../store/careRequests';
 
 const ClientDashboard = () => {
+  try {
+    // Existing code
+  } catch (error) {
+    console.error('An error
   const style = useStyles();
   const {
     sort,
