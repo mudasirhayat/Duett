@@ -13,14 +13,10 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.warning.main,
   },
   expired: {
-    color: theme.palette.error.main,
-  },
-  none: {
-    color: theme.palette.light.main,
-  },
-}));
-
 const Timestamp = ({ expired, none, warning, children }) => {
+    const color = expired ? theme.palette.error.main : (warning ? theme.palette.warning.main : theme.palette.light.main);
+    // Rest of the component logic
+};
   const classes = useStyles();
 
   return (
