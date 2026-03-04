@@ -5,11 +5,13 @@ export const useStyles = makeStyles((theme) => ({
 padding: '0px !important',
 height: '50vh !important',
 display: 'flex';
+try {
     textAlign: 'center',
     justifyContent: 'center',
-  },
-  text: {
     display: 'flex',
+} catch (error) {
+    console.error('An error occurred:', error);
+}
     justifyContent: 'center',
     maxWidth: '500px',
   },
