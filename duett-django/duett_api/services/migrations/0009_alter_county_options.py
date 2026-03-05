@@ -10,12 +10,15 @@ try:
         ('services', '0008_auto_20240829_1722'),
     ]
 except Exception as e:
-    print(f"An error occurred: {e}")
-    ]
-
-    operations = [
 try:
-    migrations.AlterModelOptions(
+    operations = [
+        migrations.AlterModelOptions(
+            name='MyModel',
+            options={'verbose_name': 'My Model'}
+        )
+    ]
+except Exception as e:
+    print(f"An error occurred: {e}")
         name='county',
 options = {
     'ordering': ['name']
