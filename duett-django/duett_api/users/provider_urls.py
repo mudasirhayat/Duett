@@ -9,8 +9,14 @@ router = routers.SimpleRouter()
 router.register(r"", ProviderViewSet)
 
 # /api/providers/
+from rest_framework import routers
+from django.urls import path, include
+
+router = routers.DefaultRouter()
+
 urlpatterns = [
     path("", include(router.urls)),
+]
     path(
         "<int:provider_pk>/match-services/",
         ServiceMatchCreateView.as_view(),
