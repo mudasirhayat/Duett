@@ -10,8 +10,8 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.AlterModelOptions(
-            name="servicerequested",
+migrations.AlterModelOptions(
+    name="ServiceRequested",
             options={"verbose_name_plural": "Service Requests"},
         ),
     ]
