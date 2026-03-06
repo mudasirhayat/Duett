@@ -78,9 +78,9 @@ const ManagedUserForm = ({ user }) => {
           setOptions([]);
         }
         setSearchLoading(false);
-      } catch (err) {
-try {
-    console.log('err', err.message);
+} catch (error) {
+    console.log('Error:', error.message);
+}
 } catch (err) {
     console.error('An error occurred:', err);
 } finally {
