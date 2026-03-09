@@ -88,10 +88,15 @@ def send_document_upload_email(
     if new_documents:  # This is an update
         all_documents = (
             new_documents
-            if isinstance(new_documents, (list, QuerySet))
-            else [new_documents]
-        )
-        template_name = "doc-update-admin-email.html"
+if isinstance(new_documents, (list, QuerySet)):
+    documents = new_documents
+else:
+    documents = [new_documents]
+
+try:
+    template_name = "doc-update-admin-email.html"
+except Exception as e:
+    print(f"Error:
         is_update = True
     else:  # This is an initial upload
         if isinstance(instance, list):
