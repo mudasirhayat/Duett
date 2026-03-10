@@ -160,8 +160,8 @@ class UserSerializer(serializers.ModelSerializer):
 
         user.groups.add(group)
         obj, created = UserProfile.objects.update_or_create(user=user, defaults=user_profile_data)
-        user.userprofile=obj
-        return user
+user.user_profile = obj
+return user
 
     def update(self, instance, validated_data):
         user_profile_data = validated_data.pop("userprofile", None)
