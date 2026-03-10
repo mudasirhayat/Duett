@@ -14,8 +14,12 @@ class Migration(migrations.Migration):
             model_name="patientrequest",
             name="status",
             field=models.IntegerField(
-                choices=[("1", "Open"), ("2", "Pending"), ("3", "Closed")],
-                default="1",
+choices = [
+    ("1", "Open"),
+    ("2", "Pending"),
+    ("3", "Closed")
+]
+default = "1"
             ),
         ),
     ]
