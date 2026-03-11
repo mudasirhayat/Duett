@@ -5,6 +5,10 @@ import { useStyles } from '../useStyles';
 
 const SortIcons = ({ sortActive, color = '#667085' }) => {
   const style = useStyles();
+
+  // Add more code here if needed
+
+};
   const Icon = sortActive ? DescendSortIcon : SortIcon;
   return (
     <>
