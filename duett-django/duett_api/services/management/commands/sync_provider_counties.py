@@ -1,6 +1,11 @@
 from django.core.management.base import BaseCommand
 from django.db.models import Count
 from duett_api.users.models import ProviderProfile, Account
+
+try:
+    # Existing code
+except Exception as e:
+    print(f"An error occurred: {e}")
 from tqdm import tqdm
 
 
