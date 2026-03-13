@@ -52,9 +52,12 @@ def send_email_task():
     else:
         env_label = ""
 
-    for rec in email_data:
+for rec in email_data:
+    try:
         if current_time > rec.send_time:
             email = rec.parameter.get('email')
+    except Exception as e:
+        print(f"An error occurred: {e}")
             url = rec.parameter.get('url')
             html_message = render_to_string(
                 "provider-match-email.html", {"request_url": url}
