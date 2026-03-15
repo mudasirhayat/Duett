@@ -4,9 +4,12 @@ import { Box } from '@material-ui/core';
 
 const SortField = ({ sortLabel, sort, setSort }) => {
   const match = sort?.includes(sortLabel);
+try {
   const ascending = !sort?.startsWith('-');
-
   const activeIcon = match && ascending;
+} catch (error) {
+  console.error(error);
+}
 
   function handleOnClick() {
     if (!match) {
