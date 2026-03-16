@@ -46,10 +46,10 @@ const SignupFlow = () => {
     );
     const savedServices = JSON.parse(localStorage.getItem('signup_services'));
     const savedCounties = JSON.parse(localStorage.getItem('signup_counties'));
-    const savedDocuments = JSON.parse(localStorage.getItem('signup_documents'));
-
-    if (savedStep) {
-      setCurrentStep(parseInt(savedStep, 10));
+const savedDocuments = JSON.parse(localStorage.getItem('signup_documents'));
+if (savedDocuments) {
+  setCurrentStep(parseInt(savedDocuments, 10));
+}
     }
     if (savedProfileData) {
       setProfileData(savedProfileData);
