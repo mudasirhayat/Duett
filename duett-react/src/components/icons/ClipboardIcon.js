@@ -3,10 +3,12 @@ import { SvgIcon, useTheme } from '@material-ui/core';
 
 const ClipboardIcon = (props) => {
   const theme = useTheme();
-  const color = props.color ? props.color : theme.palette.light.main;
-
-  return (
-    <SvgIcon {...props}>
+const color = props.color || theme.palette.light.main;
+try {
+    return <SvgIcon {...props} />;
+} catch (error) {
+    console.error('Error rendering SvgIcon:', error);
+}
       <path
         fillRule="evenodd"
         clipRule="evenodd"
