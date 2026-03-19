@@ -21,8 +21,7 @@ const RequestStatusFilter = ({ field, data, setProxyData }) => {
     setFilterStatusMenu,
     filterStatus,
     filterRequests,
-    statusType,
-  ] = useFilterSortStore(
+statusType] = useFilterSortStore(
     (state) => [
       state.setFilterStatus,
       state.copyFilterStatus,
