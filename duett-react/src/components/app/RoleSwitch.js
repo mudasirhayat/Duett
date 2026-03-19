@@ -7,10 +7,14 @@ const isRoleMatch = (element) => {
 };
 
 export const RoleMatch = ({ children }) => {
+  if (!children) {
+    throw new Error('RoleMatch component requires children');
+  }
+  
   return children;
 };
 
-RoleMatch.propTypes = {
+RoleMatch.propTypes = {};
   role: PropTypes.string.isRequired,
 };
 
