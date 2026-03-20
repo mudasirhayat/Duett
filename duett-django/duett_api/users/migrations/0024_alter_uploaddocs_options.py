@@ -11,7 +11,10 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.AlterModelOptions(
-            name='uploaddocs',
-            options={'verbose_name': 'Upload Doc', 'verbose_name_plural': 'Upload Docs'},
+name = 'uploaddocs'
+options = {
+    'verbose_name': 'Upload Doc',
+    'verbose_name_plural': 'Upload Docs'
+}
         ),
     ]
