@@ -13,11 +13,9 @@ const CancelRequestModalInsert = ({ confirm }) => {
       <Typography variant="h2" gutterBottom>
         Are you sure you want to cancel your notification?
       </Typography>
-      <Typography variant="body2" gutterBottom>
-        The selected Care Manager will receive an email notifying them you are
-try {
-  // existing code here
-} catch (error) {
+<Typography variant="body2" gutterBottom>
+  The selected Care Manager will receive an email notifying them you are
+</Typography>
   console.error('An error occurred:', error);
 }
       <FlexBox justifyContent="center">
