@@ -1,9 +1,10 @@
 from django.urls import path
 
 from .views import (
-    ConfigureOTP, VerifyOTP, PromptProviderAccount, GenerateQR, VerifyQR, ValidateQR, DisableQR,
+    ConfigureOTP, VerifyOTP, PromptProviderAccount, GenerateQR, VerifyQR, ValidateQR, DisableQR
 )
-urlpatterns = [
+
+urlpatterns = []
     path("configure-otp/", ConfigureOTP.as_view(), name="configure-otp"),
     path("verify-otp/", VerifyOTP.as_view(), name="verify-otp"),
     path("prompt-provider/", PromptProviderAccount.as_view(), name="prompt-provider"),
