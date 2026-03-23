@@ -25,8 +25,9 @@ LabelDivider.propTypes = {
   label: PropTypes.string.isRequired,
 };
 
-LabelDivider.defaultProps = {
+const defaultProps = {
   variant: 'h6',
 };
 
+export { defaultProps };
 export default LabelDivider;
