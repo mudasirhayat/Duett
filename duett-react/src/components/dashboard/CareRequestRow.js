@@ -70,12 +70,10 @@ const CareRequestRow = ({ request, index, columns }) => {
                         onClick={openRequest}
                       >
                         {formatId(request.id)}
-                      </Typography>
-                    ) : null}
-                  </TableCell>
-                );
-              } else {
-                switch (column.name) {
+                </Typography>
+              </TableCell>
+            }
+            switch (column.name) {
                   case 'Patient Name':
                   case 'Care Manager Name':
                     const { first_name = '', last_name = '' } =
