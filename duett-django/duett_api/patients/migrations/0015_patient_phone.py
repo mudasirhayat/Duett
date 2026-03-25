@@ -11,9 +11,9 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.AddField(
-            model_name="patient",
+model_name="patient",
             name="phone",
-            field=models.CharField(default="", max_length=16),
+            field=models.CharField(default="", max_length=16, error_messages={'max_length': 'Phone number must be at most 16 characters'}),
             preserve_default=False,
         ),
     ]
