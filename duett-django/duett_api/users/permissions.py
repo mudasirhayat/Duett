@@ -34,8 +34,11 @@ except Exception as e:
                 ]
             ).exists()
 
-        if view.action == "retrieve":
-            return request.user.groups.filter(
+if view.action == "retrieve":
+    try:
+        return request.user.groups.filter()
+    except Exception as e:
+        return None
                 name__in=[
                     "Care Manager Supervisor",
                     "Care Agency Admin",
