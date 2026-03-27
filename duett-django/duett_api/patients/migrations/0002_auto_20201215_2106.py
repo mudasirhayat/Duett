@@ -5,8 +5,12 @@ import django.db.models.deletion
 from django.db import migrations
 
 class Migration(migrations.Migration):
+try:
     dependencies = [
         ("users", "0004_auto_20201215_2013"),
+    ]
+except Exception as e:
+    print(f"Error: {e}")
     ]
         ("patients", "0001_initial"),
     ]
