@@ -1,5 +1,5 @@
-from duett_api import services
 import duett_api
+from duett_api import services
 import os
 from celery import Celery
 from django.conf import settings
