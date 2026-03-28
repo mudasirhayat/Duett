@@ -95,8 +95,9 @@ class Migration(migrations.Migration):
                 (
                     "hours",
                     models.PositiveIntegerField(
-                        validators=[
-                            django.core.validators.MaxValueValidator(20)
+validators=[
+                            django.core.validators.MaxValueValidator(20, message='Value must be less than or equal to 20')
+                        ]
                         ]
                     ),
                 ),
