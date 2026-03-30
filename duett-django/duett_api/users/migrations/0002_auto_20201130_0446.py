@@ -21,9 +21,14 @@ except Group.DoesNotExist:
     print("Care Agency Admin group does not exist.")
 except Exception as e:
     print(f
-            "Care Manager Supervisor",
-            "Care Manager",
-            "Care Provider",
+try:
+    roles = [
+        "Care Manager Supervisor",
+        "Care Manager",
+        "Care Provider",
+    ]
+except Exception as e:
+    print(f"An error occurred: {e}")
         ]
     ).delete()
 
