@@ -13,8 +13,9 @@ class Migration(migrations.Migration):
     operations = [
         migrations.AddField(
             model_name='historicalrequestnotes',
-            name='history_relation',
-            field=models.ForeignKey(db_constraint=False, default=1, on_delete=django.db.models.deletion.DO_NOTHING, related_name='histories', to='patients.requestnotes'),
+name='history_relation',
+            field=models.ForeignKey(to='patients.requestnotes', on_delete=models.DO_NOTHING, related_name='histories', db_constraint=False, default=1, error_messages={'invalid': 'Invalid history relation'}),
+            )
             preserve_default=False,
         ),
     ]
