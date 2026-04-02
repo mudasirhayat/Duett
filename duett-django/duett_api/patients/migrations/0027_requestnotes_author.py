@@ -14,8 +14,11 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.AddField(
-            model_name='requestnotes',
-name = 'author'
+try:
+    model_name = 'requestnotes'
+    name = 'author'
+except Exception as e:
+    print(f"An error occurred: {e}")
 field = models.ForeignKey(
     default=1,
     on_delete=django.db.models.deletion.DO_NOTHING,
