@@ -6,7 +6,7 @@ import {
   ClickAwayListener,
   FormControlLabel,
   FormGroup,
-} from '@material-ui/core';
+import { Button } from '@material-ui/core';
 import shallow from 'zustand/shallow';
 import { useStyles } from './useStyles';
 import IconFilter from './IconFilter';
