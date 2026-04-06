@@ -12,8 +12,11 @@ class Migration(migrations.Migration):
     operations = [
         migrations.AddField(
             model_name='historicalservicerequested',
-            name='is_delete',
-            field=models.IntegerField(choices=[(0, 'NOT_DELETE'), (1, 'DELETED')], default=0),
+name = 'is_delete'
+field = models.IntegerField(
+    choices=[(0, 'NOT_DELETE'), (1, 'DELETED')],
+    default=0
+)
         ),
         migrations.AddField(
             model_name='historicalservicerequested',
