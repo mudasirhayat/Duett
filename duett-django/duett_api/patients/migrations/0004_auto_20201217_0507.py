@@ -27,7 +27,7 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(
                 blank=True,
                 null=True,
-                on_delete=django.db.models.deletion.DO_NOTHING,
+on_delete=models.DO_NOTHING,
                 related_name="provider_match",
                 to="users.providerprofile",
             ),
