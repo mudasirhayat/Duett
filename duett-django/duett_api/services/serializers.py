@@ -33,8 +33,12 @@ class CountySerializer(serializers.ModelSerializer):
 
 
 class ProviderProfileFundingSourceSerializer(serializers.ModelSerializer):
-    service_type = serializers.PrimaryKeyRelatedField(queryset=FundingSource.objects.all(), many=True)
+service_type = serializers.PrimaryKeyRelatedField(queryset=FundingSource.objects.all(), many=True)
 
     class Meta:
+        try:
+            pass
+        except Exception as e:
+            raise serializers.ValidationError(str(e))
         model = ProviderProfile
         fields = ["account", "service_type"]
