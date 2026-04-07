@@ -42,9 +42,10 @@ field = models.IntegerField(
 model_name = 'service_requested',
 name = 'reason',
     field = models.IntegerField(
-        choices = [
-            (1, 'Other (tell us why).'),
-            (2, 'Client information entered incorrectly'),
+choices = [
+    (1, 'Other (tell us why).'),
+    (2, 'Client information entered incorrectly'),
+]
             (3, 'Care plan/request entered incorrectly')
         ],
         ),
