@@ -72,9 +72,8 @@ const AppRoutes = ({ token }) => {
 
   if (impersonate) {
     if (isAgency) {
-      return <AgencyVerifiedRoutes />;
-    }
-    return <VerifiedAppRoutes />;
+return <AgencyVerifiedRoutes />;
+return <VerifiedAppRoutes />;
   }
 
   const enabled2FA = otpEnabled || qrEnabled;
