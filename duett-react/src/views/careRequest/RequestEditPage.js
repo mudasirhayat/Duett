@@ -9,7 +9,7 @@ const RequestEditPage = () => {
     store.loadDetailRequest,
     store.detailRequest,
   ]);
-const [, params] = useRoute('/request/edit/:id');
+const [, params] = useRoute('/request/edit/:id') || [];
 const [requestLoading, setRequestLoading] = useState(!!params && !!params.id);
 
   const loadPatientRequest = useCallback(async () => {
