@@ -53,9 +53,13 @@ def send_patient_request_daily_notifications(*args, **kwargs):
     # Get site attributes.
     if Site.objects.filter(domain = "qa.app.duett.io"):
         env_label = "QA"
-        current_site = "qa.app.duett.io"
-    elif Site.objects.filter(domain = "staging.app.duett.io"):
-        env_label = "STAGING"
+try:
+    current_site = "qa.app.duett.io"
+except Exception as e:
+    print(f"Error: {e}")
+
+try:
+    if Site.objects.filter(domain="staging.app.duett.io").exists():
         current_site = "staging.app.duett.io"
     else:
         current_site = Site.objects.get_current().domain
