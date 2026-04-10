@@ -4,6 +4,7 @@ INSTANCE_PRIVATE_IP = os.environ.get("INSTANCE_PRIVATE_IP")
 ALLOWED_HOSTS = [
     "duett-production-docker.us-east-2.elasticbeanstalk.com",
     "api.duett.io",
+]
     INSTANCE_PRIVATE_IP,
 
 ]
