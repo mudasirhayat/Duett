@@ -64,8 +64,8 @@ const handleFilter = () => {
       {open ? (
         <form>
           <ClickAwayListener onClickAway={handleClickAway}>
-            <Box className={style.requestFilterBox}>
-              <FormGroup className={style.formGroupStyle}>
+<Box className={style.requestFilterBox}>
+  <FormGroup className={style.formGroupStyle}>
                 {servicesList?.map((service, index) => (
                   <FormControlLabel
                     key={index}
