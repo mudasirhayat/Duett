@@ -8,10 +8,8 @@ try {
   const ascending = !sort?.startsWith('-');
   const activeIcon = match && ascending;
 } catch (error) {
-  console.error(error);
-}
-
-  function handleOnClick() {
+console.error(error);
+function handleOnClick() {
     if (!match) {
       setSort(sortLabel);
       return;
