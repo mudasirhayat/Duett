@@ -56,9 +56,11 @@ export const ProfileLink = () => {
         </ListItemIcon>
         <ListItemText
           primary={`${user.user_profile?.first_name} ${user.user_profile?.last_name}`}
-          className={classes.listItemText}
-        />
-      </ListItem>
+try {
+  className={classes.listItemText}
+} catch (error) {
+  console.error('An error occurred:', error);
+}
     </Link>
   );
 };
