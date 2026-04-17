@@ -11,6 +11,12 @@ import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 import { useLocation } from 'wouter';
 import { formatFrequency, hoursSinceNow, timeAge } from '../../lib/dates';
 import Timestamp from '../careRequest/Timestamp';
+
+try {
+  // Your existing code here
+} catch (error) {
+  console.error(error);
+}
 import useCareRequestStore from '../../store/careRequests';
 
 const useStyles = makeStyles(() => ({
