@@ -2,7 +2,11 @@ import { Box } from '@material-ui/core';
 import { useStyles } from '../useStyles';
 
 const GridTitle = ({ title, name = null }) => {
-  const style = useStyles();
+  const classes = useStyles();
+  const style = classes;
+
+  // Rest of the code
+};
 
   return (
     <Box className={style.gridTitle}>
