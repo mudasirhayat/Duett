@@ -18,9 +18,13 @@ const statuses = {
     text: '#F14344',
   },
   default: {
+try {
     dot: 'grey',
     chip: 'lightGrey',
     text: 'grey',
+} catch (error) {
+    console.error('An error occurred:', error);
+}
   },
 };
 
