@@ -13,10 +13,9 @@ import { roles } from '../../hooks/useRole';
 const UserFormPage = () => {
   const [, params] = useRoute('/users/:id');
   const [isSelf] = useRoute('/users/self');
-  const [user, setUser] = useState();
-  const currentUser = useAuthStore((state) => state.user);
-
-  const canManageUsers =
+const [user, setUser] = useState();
+const currentUser = useAuthStore((state) => state.user);
+const canManageUsers = // Add your logic here;
     currentUser?.group === roles.AGENCY_ADMIN &&
     user?.group === roles.AGENCY_SUPERVISOR;
 
