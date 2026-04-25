@@ -10,8 +10,12 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.AddField(
-            model_name="user",
+try:
+    migrations.AddField(
+        model_name="user",
+    )
+except Exception as e:
+    print(f"An error occurred: {e}")
             name="is_verified",
             field=models.BooleanField(default=False),
         ),
