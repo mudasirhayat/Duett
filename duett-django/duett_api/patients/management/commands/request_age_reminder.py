@@ -40,11 +40,12 @@ def handle(self, *args, **kwargs):
         url = f"https://{current_site.domain}/"
 
         connection = mail.get_connection()
-        message_list = []
-
-        for user_id in user_ids:
-            try:
-                creator = get_user_model().objects.get(pk=user_id)
+message_list = []
+for user_id in user_ids:
+    try:
+        creator = get_user_model().objects.get(pk=user_id)
+    except get_user_model().DoesNotExist:
+        print(f"User with id {user_id}
 
                 html_message = render_to_string(
                     "care-manager-reminder-email.html", {"dashboard_url": url}
