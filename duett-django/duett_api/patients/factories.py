@@ -9,6 +9,14 @@ class PatientFactory(DjangoModelFactory):
     class Meta:
         model = Patient
 
+    @classmethod
+    def create_patient(cls, **kwargs):
+        try:
+            return cls.create(**kwargs)
+        except Exception as e:
+            raise e
+        model = Patient
+
     first_name = factory.Faker("first_name")
     last_name = factory.Faker("last_name")
     # https://stackoverflow.com/questions/59779008/factory-boy-date-provider-is-returning-string
