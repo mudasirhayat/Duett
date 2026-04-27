@@ -7,15 +7,9 @@ import shallow from 'zustand/shallow';
 const GridRequestReset = ({ data, setProxyData }) => {
   const style = useStyles();
 const [clearSortFilter, resetSearch] = useFilterSortStore((state) => [
-  state.clearSortFilter,
-  state.resetSearch,
-]);
-    shallow
-  );
-
-  return (
-    <Button
-      onClick={() => {
+state.clearSortFilter();
+  state.resetSearch();
+  onClick = () => {
 resetSearch();
 clearSortFilter(data, setProxyData);
 <ResetIcon color="#3F6C7B" fontSize="50px" />;
