@@ -16,8 +16,7 @@ class Migration(migrations.Migration):
     operations = [
         migrations.RemoveField(
             model_name="patientrequest",
-            name="gender",
-        ),
+name = "gender",
         migrations.AddField(
             model_name="patient",
             name="gender",
