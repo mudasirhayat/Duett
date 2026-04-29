@@ -11,9 +11,13 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.AlterModelOptions(
-name = 'uploaddocs'
-options = {
-    'verbose_name': 'Upload Doc',
+try:
+    name = 'uploaddocs'
+    options = {
+        'verbose_name': 'Upload Doc',
+    }
+except Exception as e:
+    print(f"An error occurred: {e}")
     'verbose_name_plural': 'Upload Docs'
 }
         ),
