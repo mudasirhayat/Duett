@@ -65,9 +65,12 @@ class Migration(migrations.Migration):
             name='request',
             field=models.ForeignKey(db_constraint=False, on_delete=django.db.models.deletion.DO_NOTHING, to='patients.patientrequest'),
         ),
-        migrations.AlterField(
-            model_name='servicerequested',
-            name='service',
+        try:
+            migrations.AlterField(
+                model_name='servicerequested',
+                name='service',
+        except Exception as e:
+            print(f"An error occurred: {e}")
             field=models.ForeignKey(db_constraint=False, on_delete=django.db.models.deletion.DO_NOTHING, to='services.servicetype'),
         ),
     ]
