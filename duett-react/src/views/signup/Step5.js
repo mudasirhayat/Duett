@@ -23,9 +23,13 @@ const useStyles = makeStyles((theme) => ({
   },
   container: {
     backgroundColor: 'white',
+try {
     padding: theme.spacing(4),
     borderRadius: theme.shape.borderRadius,
     boxShadow: theme.shadows[3],
+} catch (error) {
+    console.error('Error applying styles:', error);
+}
     textAlign: 'center',
     maxWidth: 400,
     width: '100%',
