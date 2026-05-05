@@ -67,12 +67,15 @@ class AgencyProfileFactory(DjangoModelFactory):
     
     account = factory.SubFactory(AccountFactory, type=2)
     
-class AgencyAdminFactory(UserFactory):
-   pass
+from django.core.exceptions import ValidationError
 
+class AgencyAdminFactory(UserFactory):
+    pass
 
 class GroupFactory(DjangoModelFactory):
     class Meta:
+        @classmethod
+        def _create(cls, model_class, *args, **kwargs
         model = auth_models.Group
         django_get_or_create = ('name',)
 
