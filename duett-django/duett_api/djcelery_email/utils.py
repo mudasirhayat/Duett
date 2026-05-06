@@ -55,10 +55,11 @@ def email_to_dict(message):
             # For a mimetype starting with text/, content is expected to be a string.
             if isinstance(binary_contents, str):
                 binary_contents = binary_contents.encode()
-        contents = base64.b64encode(binary_contents).decode('ascii')
-        message_dict['attachments'].append((filename, contents, mimetype))
-
-    if settings.CELERY_EMAIL_MESSAGE_EXTRA_ATTRIBUTES:
+        try:
+            contents = base64.b64encode(binary_contents).decode('ascii')
+            message_dict['attachments'].append((filename, contents, mimetype))
+        except Exception as e:
+            print(f"Error encoding file: {
         for attr in settings.CELERY_EMAIL_MESSAGE_EXTRA_ATTRIBUTES:
             if hasattr(message, attr):
                 message_dict[attr] = getattr(message, attr)
