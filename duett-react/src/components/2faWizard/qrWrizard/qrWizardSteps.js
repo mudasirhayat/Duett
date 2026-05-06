@@ -26,8 +26,8 @@ title: 'Configuring using Authenticator',
   {
     title: 'Verifying code',
     title2:
-      'You can go through the steps to configure two-factor authentication',
-    description: (
+const message = 'You can go through the steps to configure two-factor authentication';
+const description = (
       <ul style={{ fontFamily: 'Arial', fontSize: '12px' }}>
         <li>Click the added account on authenticator app.</li>
         <li>You will be able to see a 6 digit code.</li>
