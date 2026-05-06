@@ -52,9 +52,11 @@ export const useStyles = makeStyles(() => ({
   },
   formLabel: {
     '&.MuiFormLabel-root': {
-      color: '#3F6C7B',
-      fontSize: '18px !important',
-      fontWeight: 500,
+{
+  color: '#3F6C7B',
+  fontSize: '18px',
+  fontWeight: 500,
+}
       lineHeight: '18px',
       marginBottom: '4px',
     },
