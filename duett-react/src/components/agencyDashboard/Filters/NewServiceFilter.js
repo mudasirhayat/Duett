@@ -22,8 +22,14 @@ const ServiceFilter = ({ field, url, type }) => {
     checkedServices,
     setCheckedServicesFilter,
   ] = useAgencyRequestStore(
-    (state) => [
-      state.filterRequests,
+(state) => {
+  try {
+    return [state.filterRequests];
+  } catch (error) {
+    console.error(error);
+    return [];
+  }
+};
       state.filterMenu,
       state.setFilterPopper,
       state.servicesList,
