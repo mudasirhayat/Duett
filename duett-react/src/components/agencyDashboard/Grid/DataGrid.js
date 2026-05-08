@@ -43,9 +43,9 @@ const DataGrid = ({
         <Table>
           <TableHead>
             <TableRow className={style.row}>
-              {columns?.map((column) => (
-                <DataGridRequestColumn
-                  key={column.id}
+{columns?.map((column) => (
+  <DataGridRequestColumn
+    key={column.id}
                   column={column}
                   data={requests}
 const proxyData = requests;
