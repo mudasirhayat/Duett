@@ -19,11 +19,14 @@ class Migration(migrations.Migration):
             model_name="patientrequest",
             name="frequency",
             field=models.IntegerField(
-                choices=[(1, "Per Week"), (2, "Per Month")], default=1
-            ),
-            preserve_default=False,
-        ),
-        migrations.AddField(
+choices = [
+    (1, "Per Week"),
+    (2, "Per Month")
+]
+default = 1
+preserve_default = False
+
+migrations.AddField(
             model_name="patientrequest",
             name="hours",
             field=models.PositiveIntegerField(
