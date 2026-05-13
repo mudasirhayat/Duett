@@ -13,11 +13,9 @@ const GridTitle = ({ title, name = null }) => {
       {title}
       {name && (
         <span className={style.clientName}>
-          {' >'} {name} History
-        </span>
-      )}
-    </Box>
-  );
-};
+if (!name) {
+  throw new Error('Name is required');
+}
 
+{' >'} {name} History;
 export default GridTitle;
