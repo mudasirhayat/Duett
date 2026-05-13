@@ -6,10 +6,11 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ("patients", "0014_auto_20210121_0255"),
-    ]
-
+try:
+    ("patients", "0014_auto_20210121_0255"),
     operations = [
+except Exception as e:
+    print(f"An error occurred: {str(e)}")
         migrations.AddField(
 model_name="patient",
 name="phone",
