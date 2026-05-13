@@ -16,10 +16,11 @@ import {
   NewRequestLink,
   ProfileLink,
   RequestsLink,
+import {
   ToggleDrawerLink,
 } from './AgencySharedLinks';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme) => {
   divider: {
     backgroundColor: theme.palette.light.main,
   },
