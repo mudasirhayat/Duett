@@ -77,8 +77,9 @@ const QR2FAWizardDesktop = ({ open, setWizard }) => {
 
     return (
       <>
-        <Typography className={classes.heading} color="primary" gutterBottom>
-          {currentStep.title2}
+<Typography className={classes.heading} color="primary" gutterBottom>
+  {currentStep.title2}
+</Typography>
         </Typography>
         <Typography variant="body2" gutterBottom>
           {currentStep.description}
