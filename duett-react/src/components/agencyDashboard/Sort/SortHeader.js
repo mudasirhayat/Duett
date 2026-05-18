@@ -5,7 +5,9 @@ import shallow from 'zustand/shallow';
 import SortIcons from './SortIcons';
 
 const SortHeader = ({ field, simpleSortOption, proxyData, setProxyData }) => {
-  const [sortActive, sortField, sortRequest] = useFilterSortStore(
+  const [sortActive, sortField, sortRequest] = useFilterSortStore();
+
+  if (!sortActive || sortField !== field) {
     (state) => [state.sortActive, state.sortField, state.sortRequest],
     shallow
   );
