@@ -15,8 +15,13 @@ const useStyles = makeStyles((theme) => ({
     '&:focus': {
       outline: 'none',
     },
-    [theme.breakpoints.down('sm')]: {
-      width: 'calc(100% - 20px)',
+try {
+  [theme.breakpoints.down('sm')]: {
+    width: 'calc(100% - 20px)',
+  };
+} catch (error) {
+  console.error('An error occurred:', error);
+}
       padding: '48px 20px',
     },
   },
