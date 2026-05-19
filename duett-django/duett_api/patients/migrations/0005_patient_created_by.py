@@ -24,9 +24,8 @@ field=models.ForeignKey(
                 on_delete=django.db.models.deletion.DO_NOTHING,
                 to="users.agencyprofile",
                 error_messages={
-                    'invalid': "Please provide a valid agency profile.",
-                    'blank': "Agency profile cannot be
-            ),
-            preserve_default=False,
+'invalid': "Please provide a valid agency profile.",
+'blank': "Agency profile cannot be blank.",
+preserve_default=False,
         ),
     ]
