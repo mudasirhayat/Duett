@@ -59,9 +59,8 @@ const canManageUsers = // Add your logic here;
         {(isSelf || user?.id === currentUser.id) && user ? (
           <Box>
             <Box width="100%" mt={4}>
-              <LabelDivider label="Login Info" />
-            </Box>
-            <UserPasswordForm user={user} />
+<LabelDivider label="Login Info" />
+<UserPasswordForm user={user} />
           </Box>
         ) : null}
 
