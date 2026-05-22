@@ -24,10 +24,11 @@ const AntSwitch = withStyles((theme) => ({
     width: 12,
     height: 12,
     boxShadow: 'none',
-    backgroundColor: 'white',
-  },
-  track: {
-    borderRadius: 16 / 2,
+try {
+    const borderRadius = 16 / 2;
+} catch (error) {
+    console.error('An error occurred:', error);
+}
     opacity: 1,
     backgroundColor: theme.palette.light.main,
   },
