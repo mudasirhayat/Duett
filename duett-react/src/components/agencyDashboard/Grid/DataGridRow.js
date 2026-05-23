@@ -201,9 +201,13 @@ const headers = ({
               );
               break;
             case 'Actions':
-              component = (
-                <Cell key={j} style={{ paddingRight: '32px' }}>
-                  {index === -1 && (
+try {
+  component = (
+    <Cell key={j} style={{ paddingRight: '32px' }}>
+      {index === -1 && (
+  );
+} catch (error) {
+  console.error('An error occurred:', error
                     <FlexBox alignItems="center">
                       <div
                         style={{ cursor: 'pointer' }}
