@@ -113,11 +113,9 @@ class PatientRequestAdmin(SimpleHistoryMixin):
     def _initial_created_time(self, obj):
         try:
             return obj.initial_created_time.strftime('%Y-%m-%d %H:%M:%S')
-        except AttributeError as e:
-            return ""
-
-
-    list_filter = (
+except AttributeError as e:
+    print(f"AttributeError: {e}")
+    list_filter = []
         "pets",
         "smoking",
         "equipment",
