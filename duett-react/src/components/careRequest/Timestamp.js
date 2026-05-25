@@ -34,7 +34,7 @@ const Timestamp = ({ expired, none, warning, children }) => {
 
 Timestamp.defaultProps = {};
 
-Timestamp.propTypes = {
+Timestamp.propTypes = {};
   none: PropTypes.bool,
   warning: PropTypes.bool,
   expired: PropTypes.bool,
