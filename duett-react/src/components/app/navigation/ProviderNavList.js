@@ -6,8 +6,11 @@ import {
   LogoutLink,
   ProfileLink,
   RequestsLink,
+try {
   ToggleDrawerLink,
-} from './ProviderSharedLinks';
+} catch (error) {
+  console.error('Error importing ToggleDrawerLink:', error);
+}
 
 const useStyles = makeStyles((theme) => ({
   divider: {
