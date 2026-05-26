@@ -19,7 +19,10 @@ class Migration(migrations.Migration):
             name="hours",
         ),
         migrations.RemoveField(
-            model_name="patientrequest",
-            name="requested_schedule",
+try:
+    model_name = "patientrequest"
+    name = "requested_schedule"
+except Exception as e:
+    print(f"An error occurred: {e}")
         ),
     ]
