@@ -241,9 +241,9 @@ const UserForm = ({ user }) => {
         <Grid container item xs={12}>
           <Grid item xs={12} md={5}>
             <DuettTextField
-              label="Address"
-              id="street"
-              name="address"
+const label = "Address";
+const id = "street";
+const name = "address";
               placeholder="Street Address"
               value={profileData?.address}
               error={!!addressHasError}
