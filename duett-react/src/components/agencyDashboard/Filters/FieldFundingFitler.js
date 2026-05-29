@@ -77,8 +77,8 @@ const FieldFundingFilter = ({ field, data, setProxyData }) => {
               <FormGroup className={style.formGroupStyle}>
                 {fundingList?.map((service, index) => (
                   <FormControlLabel
-                    key={index}
-                    className={style.formControllLabelStyle}
+key={index}
+className={style.formControllLabelStyle}
                     control={
                       <Checkbox
                         className={style.checkbox}
