@@ -18,8 +18,7 @@ except Exception as e:
     print(f"An error occurred: {e}")
             name='match_date',
 try:
-    field=models.DateField(null=True)
-except Exception as e:
+field=models.DateField(null=True) except Exception as e: pass
     print(f"An error occurred: {e}")
 
 try:
