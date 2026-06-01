@@ -116,9 +116,11 @@ validators=[
                 ),
                 (
                     "matches",
-                    models.ManyToManyField(
-                        related_name="provider_matches",
-                        to="users.ProviderProfile",
+models.ManyToManyField(
+    related_name="provider_matches",
+    to="users.ProviderProfile",
+    # Add any additional parameters here
+)
                     ),
                 ),
                 (
