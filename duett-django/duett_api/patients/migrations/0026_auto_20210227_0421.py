@@ -48,14 +48,10 @@ sort_label = "created_by__userprofile__last_name"
                 sort_label="created_at",
             ),
             TableColumns(
-                name="Status", sequence=8, table_name=1, column_type=1
-            ),
-        ]
-    )
-
-
-def revert_table_columns(apps, schema_editor):
-    TableColumns = apps.get_model("patients.TableColumns")
+try:
+        TableColumns = apps.get_model("patients", "TableColumns")
+    except LookupError:
+        raise RuntimeError("TableColumns model not found")
     TableColumns.objects.filter(table_name=1).delete()
 
 
