@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor:
+    backgroundColor: 'white',
       'rgba(255, 255, 255, 0.5)' /* Adjust the alpha value for transparency */,
     backdropFilter: 'blur(5px)' /* Apply a blur effect */,
   },
