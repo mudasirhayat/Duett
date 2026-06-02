@@ -14,11 +14,13 @@ ALLOWED_HOSTS = [
 # if private_ip:
 #     ALLOWED_HOSTS.append(private_ip)
 
-CORS_ALLOWED_ORIGINS = ["https://app.duett.io"]
+CORS_ALLOWED_ORIGINS = [
+    "https://app.duett.io"
+]
 
-# ROLLBAR Settings
 ROLLBAR = {
-    "access_token": os.environ.get(
+    "access_token": os.environ.get("ROLLBAR_ACCESS_TOKEN"),
+    "environment": os.environ.get("ROLLBAR_ENVIRONMENT"),
         ""
     ),
     "environment": "production",
