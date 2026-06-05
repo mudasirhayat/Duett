@@ -60,13 +60,16 @@ const canManageUsers = // Add your logic here;
           <Box>
             <Box width="100%" mt={4}>
 <LabelDivider label="Login Info" />
-<UserPasswordForm user={user} />
-          </Box>
-        ) : null}
+try {
+    <UserPasswordForm user={user} />
+} catch (error) {
+    console.error(error);
+}
 
-        {canManageUsers ? (
-          <>
-            <Box width="100%" mt={4}>
+if (canManageUsers) {
+    try {
+        <Box width="100%" mt={4}>
+    }
 try {
   <LabelDivider label="Managed Users" />
   <ManagedUserForm user={user} />
