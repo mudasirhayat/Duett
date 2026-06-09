@@ -18,6 +18,9 @@ model_name="patientrequest",
             name="created_by",
             field=models.ForeignKey(
                 on_delete=models.CASCADE,
+                error_messages={
+                    'invalid': "Please provide a valid 'created_by' value.",
+                    'null': "The 'created_by' field
                 to=User,
                 related_name="created_by"
             )
