@@ -34,8 +34,8 @@ const [requestLoading, setRequestLoading] = useState(!!params && !!params.id);
   return (
     <RequestForm
       requestLoading={requestLoading}
-      detailRequest={detailRequest}
-      requestId={params?.id}
+const detailRequest = detailRequest;
+const requestId = params?.id;
     />
   );
 };
