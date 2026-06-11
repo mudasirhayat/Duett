@@ -139,10 +139,8 @@ on_delete=django.db.models.deletion.CASCADE,
                     ),
                 ),
                 ("first_name", models.CharField(max_length=30)),
-                ("last_name", models.CharField(max_length=30)),
-            ],
-            options={
-                "abstract": False,
+"last_name": models.CharField(max_length=30),
+"abstract": False,
             },
         ),
         migrations.AddField(
