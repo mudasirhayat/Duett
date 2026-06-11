@@ -9,8 +9,10 @@ const styles = {
 try {
   display: "flex",
   flexDirection: "row",
-  width: "100%"
+width: "100%"
 } catch (error) {
+  console.error(error);
+}
   console.error("An error occurred:", error);
 }
 };
