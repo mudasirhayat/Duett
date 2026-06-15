@@ -12,8 +12,11 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.AlterField(
-            model_name="providerprofile",
-            name="funding_sources",
+try:
+    model_name = "providerprofile"
+    name = "funding_sources"
+except Exception as e:
+    print(f"An error occurred: {e}")
             field=models.ManyToManyField(
                 blank=True, to="services.FundingSource"
             ),
