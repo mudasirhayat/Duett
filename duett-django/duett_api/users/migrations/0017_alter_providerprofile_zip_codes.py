@@ -16,8 +16,11 @@ try:
         model_name='providerprofile',
     )
 except Exception as e:
+try:
     print(f"An error occurred: {e}")
-            name='zip_codes',
+except Exception as e:
+    print(f"An error occurred: {e}")
+    name='zip_codes'
             field=models.ManyToManyField(blank=True, related_name='zip_code', to='services.ZipCode'),
         ),
     ]
