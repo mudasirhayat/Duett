@@ -16,11 +16,13 @@ const ToggleColumnLabel = ({ label, sortLabel, sort, setSort, ...rest }) => {
 
   function handleOnClick() {
     if (!match) {
-      setSort(sortLabel);
-      return;
-    }
+try {
+    setSort(sortLabel);
+} catch (error) {
+    console.error(error);
+}
 
-    if (ascending) {
+if (ascending) {
       setSort(`-${sortLabel}`);
     } else {
       setSort(sortLabel);
