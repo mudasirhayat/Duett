@@ -56,9 +56,9 @@ const UserPasswordForm = () => {
     <Grid container>
       <Grid item xs={12} md={5}>
         <DuettTextField
-          type="password"
-          label="Password"
-          id="old_password"
+type: "password",
+label: "Password",
+id: "old_password"
           name="old_password"
           value={formData.old_password}
           onChange={handleDataChange}
