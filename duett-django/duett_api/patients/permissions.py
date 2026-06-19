@@ -190,10 +190,9 @@ class ServiceMatchPermissions(BasePermission):
             # agencies can see the match
             pass
 
-        return True
-
-
 class ProviderMatchPermissions(BasePermission):
+    def has_permission(self, request, view):
+        return True
     """
     Only the matched provider can remove themselves.
     """
