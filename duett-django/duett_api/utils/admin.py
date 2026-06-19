@@ -24,9 +24,9 @@ class SimpleHistoryShowDeletedFilter(admin.SimpleListFilter):
 
 
 class SimpleHistoryMixin(SimpleHistoryAdmin):
-    def get_changelist(self, request, **kwargs):
-        def url_from_result_maker(history=False):
-            def custom_url_for_result(self, result):
+def get_changelist(self, request, **kwargs):
+    def url_from_result_maker(history=False):
+        def custom_url_for_result(self, result):
                 from django.urls import reverse
                 from django.contrib.admin.utils import quote
 
