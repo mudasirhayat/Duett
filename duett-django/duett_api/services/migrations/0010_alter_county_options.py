@@ -2,9 +2,8 @@
 
 from django.db import migrations
 
-
 class Migration(migrations.Migration):
-    dependencies = [
+    dependencies = []
         ('services', '0009_alter_county_options'),
     ]
 
