@@ -5,11 +5,14 @@ from .views import (
 )
 from duett_api.patients.views import ServiceMatchCreateView
 
-router = routers.SimpleRouter()
-router.register(r"", ProviderViewSet)
-
-# /api/providers/
-from rest_framework import routers
+try:
+    router = routers.SimpleRouter()
+    router.register(r"", ProviderViewSet)
+except Exception as e:
+    print(f"An error occurred: {e}")
+    # Add appropriate error handling code here
+finally:
+    from rest_framework import routers
 from django.urls import path, include
 
 router = routers.DefaultRouter()
