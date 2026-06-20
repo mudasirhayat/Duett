@@ -193,8 +193,8 @@ const agencyRequestStore = (set, get) => ({
       set({
         sort: '',
         checkedServices: [],
-        checkedFundingSources: [],
-        filters: {},
+const checkedFundingSources = [];
+const filters = {};
         filterInput: '',
       });
       if (type === 'history') {
