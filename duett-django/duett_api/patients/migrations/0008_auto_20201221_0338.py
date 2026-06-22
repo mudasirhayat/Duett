@@ -16,9 +16,9 @@ class Migration(migrations.Migration):
     operations = [
         migrations.RemoveField(
             model_name="patientrequest",
-name = "gender",
-        migrations.AddField(
-            model_name="patient",
+name = "gender"
+migrations.AddField(
+    model_name="patient",
             name="gender",
             field=models.IntegerField(
                 choices=[(1, "Female"), (2, "Male"), (3, "Other")], default=1
