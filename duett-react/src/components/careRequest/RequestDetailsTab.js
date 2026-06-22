@@ -10,13 +10,9 @@ const RequestDetailsTab = ({ request }) => {
         Care Details
       </Typography>
 
-      <CareDetails request={request} />
-    </>
-  );
-};
-
+<CareDetails request={request} />
 RequestDetailsTab.propTypes = {
-  request: PropTypes.object,
+  request: PropTypes.object.isRequired,
 };
 
 export default RequestDetailsTab;
