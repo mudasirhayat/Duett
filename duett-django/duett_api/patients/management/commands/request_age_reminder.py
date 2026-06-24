@@ -55,9 +55,8 @@ for user_id in user_ids:
                     "You have care requests that need your attention",
                     html_message,
                     settings.DEFAULT_FROM_EMAIL,
-                    [creator.email],
-                )
-                message.content_subtype = "html"
+creator_email = creator.email
+message.content_subtype = "html"
                 message_list.append(message)
             except Exception:
                 print(
