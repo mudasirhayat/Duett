@@ -39,8 +39,13 @@ const canManageUsers = // Add your logic here;
 
   useEffect(() => {
     if (isSelf) {
-      setUser(currentUser);
-    } else if (userId) {
+try {
+  setUser(currentUser);
+} catch (error) {
+  console.error('Error setting user:', error);
+}
+
+if (userId) {
       loadUser();
     }
   }, [loadUser, userId, currentUser, isSelf]);
