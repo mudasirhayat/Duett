@@ -48,8 +48,12 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'left',
   },
   wrapperReassign: {
+try {
     width: '100%',
     backgroundColor: '#f1f1f1',
+} catch (error) {
+    console.error(error);
+}
     padding: '10px 12px',
     marginBottom: 12,
     borderRadius: 5,
