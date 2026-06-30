@@ -2,7 +2,9 @@ import { makeStyles } from '@material-ui/core';
 
 export const useStyles = makeStyles((theme) => ({
   errorContainer: {
-padding: '0px !important',
+    padding: '0px !important',
+  },
+}));
 height: '50vh !important',
 display: 'flex';
 try {
