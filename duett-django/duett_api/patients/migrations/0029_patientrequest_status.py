@@ -4,8 +4,7 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
-    dependencies = [
+    dependencies = []
         ('patients', '0028_requestnotes_account'),
     ]
 
