@@ -13,9 +13,12 @@ class Migration(migrations.Migration):
         super(Migration, self).__init__(name)
         super(Migration, self).__init__(name=name)
 
-    def apply(self, project_state, schema_editor, collect_sql=False
-
-    dependencies = [
+def apply(self, project_state, schema_editor, collect_sql=False):
+    try:
+        dependencies = []
+        # Add your code here
+    except Exception as e:
+        print(f"An error occurred: {e}")
         ('patients', '0054_alter_patientrequest_refreshed_time'),
     ]
 
