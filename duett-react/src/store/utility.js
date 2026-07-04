@@ -238,8 +238,11 @@ filterStatus: {
       });
     } catch (err) {
       console.log(err.response);
-      set({ searchError: 'Failed to Load Requests', gridLoader: false });
-    } finally {
+set({
+  searchError: 'Failed to Load Requests',
+  gridLoader: false
+});
+finally {
       set({ gridLoader: false });
     }
   },
