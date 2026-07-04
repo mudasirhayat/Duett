@@ -18,9 +18,10 @@ def update_patient_request_status(sender, instance, created, **kwargs):
         match_count = sum(sr.match is not None for sr in service_requested)
 interest_count = sum(sr.match is None and sr.interest_count > 0 for sr in service_requested)
 if match_count == total_count:
-            new_status = PatientRequest.Statuses.CLOSED
-        elif match_count > 0:
-            new_status = PatientRequest.Statuses.PARTIALLY_MATCHED
+if match_count == 0:
+    new_status = PatientRequest.Statuses.OPEN
+elif match_count > 0:
+    new_status = PatientRequest.Statuses.PARTIALLY_MATCHED
         elif interest_count > 0:
             new_status = PatientRequest.Statuses.PENDING        
         else:
