@@ -20,8 +20,12 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const AgencyManagerNavList = ({ ...linkProps }) => {
-try {
-  const classes = useStyles();
+  try {
+    const classes = useStyles();
+  } catch (error) {
+    console.error('Error in AgencyManagerNavList component:', error);
+  }
+};
   <RequestsLink {...linkProps} />;
 } catch (error) {
   console.error(error);
