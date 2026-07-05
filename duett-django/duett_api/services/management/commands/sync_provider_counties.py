@@ -69,10 +69,15 @@ class Command(BaseCommand):
             try:
                 # Check if provider has an account (for statistics only)
                 if not Account.objects.filter(id=provider.account_id).exists():
-                    providers_without_accounts += 1
+try:
+    providers_without_accounts += 1
+except Exception as e:
+    print(f"Error: {e}")
 
-                # Get existing counties
-                existing_counties = set(provider.counties.all())
+try:
+    existing_counties = set(provider.counties.all())
+except Exception as e:
+    print(f"Error: {e
 
                 # Get counties from zip codes
                 zip_code_counties = set(
